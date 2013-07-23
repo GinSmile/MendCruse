@@ -1,0 +1,123 @@
+<com.agimind.widget.SlideHolder xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slideHolder"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity" >
+
+    <ScrollView
+        android:layout_width="200dp"
+        android:layout_height="fill_parent"
+        android:background="@android:color/black" >
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"            
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/all_element"
+                android:textColor="@color/white"    
+                android:background="@color/yaqing"        
+                android:drawableLeft="@drawable/table" />
+            <Button
+                android:id="@+id/all_element"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/all_element"
+                android:textColor="@color/white" 
+                android:gravity="center_vertical|left"
+                android:background="@drawable/btn_selector" />
+            
+            
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search"
+                android:textColor="@color/white"
+                android:background="@color/yaqing"
+                android:drawableLeft="@drawable/table"/>
+            	
+            <Button
+                android:id="@+id/search_element"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search_element"
+                android:textColor="@color/white"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/btn_selector" />
+            
+            <Button
+                android:id="@+id/search_compound"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search_compound"
+                android:textColor="@color/white"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/btn_selector" />
+            
+            <Button
+                android:id="@+id/search_equation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search_equation"
+                android:textColor="@color/white"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/btn_selector" />
+            
+            
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz"
+                android:textColor="@color/white"
+                android:background="@color/yaqing"
+                android:drawableLeft="@drawable/table"/>
+            <Button
+                android:id="@+id/quiz"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz"
+                android:textColor="@color/white"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/btn_selector" />
+            
+          
+          <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/inter"
+                android:textColor="@color/white"
+                android:background="@color/yaqing"
+                android:drawableLeft="@drawable/table"/>
+            <Button
+                android:id="@+id/inter"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/element_inter"
+                android:textColor="@color/white"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/btn_selector" />
+            
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/element_period_table"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+</com.agimind.widget.SlideHolder>
