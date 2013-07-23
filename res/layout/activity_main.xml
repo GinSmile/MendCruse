@@ -20,7 +20,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/all_element"
                 android:textColor="@color/white"    
-                android:background="@color/yaqing"        
+                android:background="@color/yaqing"    
+                android:gravity="center_vertical"    
                 android:drawableLeft="@drawable/table" />
             <Button
                 android:id="@+id/all_element"
@@ -38,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/search"
                 android:textColor="@color/white"
+                android:gravity="center_vertical"
                 android:background="@color/yaqing"
                 android:drawableLeft="@drawable/table"/>
             	
@@ -67,20 +69,46 @@
                 android:textColor="@color/white"
                 android:gravity="center_vertical|left"
                 android:background="@drawable/btn_selector" />
+   
             
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calc"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:background="@color/yaqing"
+                android:drawableLeft="@drawable/table"/>
+            <Button
+                android:id="@+id/inter"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calc_weight"
+                android:textColor="@color/white"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/btn_selector" />
             
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/quiz"
+                android:gravity="center_vertical"
                 android:textColor="@color/white"
                 android:background="@color/yaqing"
                 android:drawableLeft="@drawable/table"/>
             <Button
+                android:id="@+id/element_quiz"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/element_quiz"
+                android:textColor="@color/white"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/btn_selector" />
+            <Button
                 android:id="@+id/quiz"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/quiz"
+                android:text="@string/compound_quiz"
                 android:textColor="@color/white"
                 android:gravity="center_vertical|left"
                 android:background="@drawable/btn_selector" />
@@ -90,6 +118,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/inter"
+                android:gravity="center_vertical"
                 android:textColor="@color/white"
                 android:background="@color/yaqing"
                 android:drawableLeft="@drawable/table"/>
