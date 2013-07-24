@@ -19,8 +19,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/all_element"
-                android:textColor="@color/white"    
-                android:background="@color/yaqing"    
+                android:textColor="@color/little_title_text"    
+                android:background="@color/little_title"    
                 android:gravity="center_vertical"    
                 android:drawableLeft="@drawable/table" />
             <Button
@@ -28,7 +28,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/all_element"
-                android:textColor="@color/white" 
+                android:textColor="@color/title_btn_text" 
                 android:gravity="center_vertical|left"
                 android:background="@drawable/btn_selector" />
             
@@ -38,9 +38,9 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/search"
-                android:textColor="@color/white"
+                android:textColor="@color/little_title_text"
                 android:gravity="center_vertical"
-                android:background="@color/yaqing"
+                android:background="@color/little_title"
                 android:drawableLeft="@drawable/table"/>
             	
             <Button
@@ -48,7 +48,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/search_element"
-                android:textColor="@color/white"
+                android:textColor="@color/title_btn_text"
                 android:gravity="center_vertical|left"
                 android:background="@drawable/btn_selector" />
             
@@ -57,7 +57,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/search_compound"
-                android:textColor="@color/white"
+                android:textColor="@color/title_btn_text"
                 android:gravity="center_vertical|left"
                 android:background="@drawable/btn_selector" />
             
@@ -66,7 +66,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/search_equation"
-                android:textColor="@color/white"
+                android:textColor="@color/title_btn_text"
                 android:gravity="center_vertical|left"
                 android:background="@drawable/btn_selector" />
    
@@ -76,15 +76,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/calc"
                 android:gravity="center_vertical"
-                android:textColor="@color/white"
-                android:background="@color/yaqing"
+                android:textColor="@color/little_title_text"
+                android:background="@color/little_title"
                 android:drawableLeft="@drawable/table"/>
             <Button
                 android:id="@+id/inter"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/calc_weight"
-                android:textColor="@color/white"
+                android:textColor="@color/title_btn_text"
                 android:gravity="center_vertical|left"
                 android:background="@drawable/btn_selector" />
             
@@ -93,15 +93,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/quiz"
                 android:gravity="center_vertical"
-                android:textColor="@color/white"
-                android:background="@color/yaqing"
+                android:textColor="@color/little_title_text"
+                android:background="@color/little_title"
                 android:drawableLeft="@drawable/table"/>
             <Button
                 android:id="@+id/element_quiz"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/element_quiz"
-                android:textColor="@color/white"
+                android:textColor="@color/title_btn_text"
                 android:gravity="center_vertical|left"
                 android:background="@drawable/btn_selector" />
             <Button
@@ -109,7 +109,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/compound_quiz"
-                android:textColor="@color/white"
+                android:textColor="@color/title_btn_text"
                 android:gravity="center_vertical|left"
                 android:background="@drawable/btn_selector" />
             
@@ -119,15 +119,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/inter"
                 android:gravity="center_vertical"
-                android:textColor="@color/white"
-                android:background="@color/yaqing"
+                android:textColor="@color/little_title_text"
+                android:background="@color/little_title"
                 android:drawableLeft="@drawable/table"/>
             <Button
                 android:id="@+id/inter"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/element_inter"
-                android:textColor="@color/white"
+                android:textColor="@color/title_btn_text"
                 android:gravity="center_vertical|left"
                 android:background="@drawable/btn_selector" />
             
@@ -138,6 +138,9 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
 
+        <ScrollView 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -145,7 +148,8 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="@string/element_period_table"
-            android:textSize="25sp" />
+            android:textSize="15dip" />
+        </ScrollView>
 
     </RelativeLayout>
 
