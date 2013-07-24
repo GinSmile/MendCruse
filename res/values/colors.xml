@@ -3,8 +3,9 @@
     <color name="dianqing">#177CB0</color>
     <color name="congqing">#0EB83A</color>
     <color name="dark">#000000</color>
-    <color name="white">#ffffff</color>
+    <color name="little_title_text">#ffffff</color><!--白色，小标题字的颜色 -->
     <color name="blue">#44CEF6</color>
     <color name="cangse">#75878A</color>
-    <color name="yaqing">#424C50</color>
+    <color name="little_title">#424C50</color><!--鸦青，小标题的背景色 -->
+    <color name="title_btn_text">#ffffff</color><!--白色，小标题下面按钮的字的颜色 -->
 </resources>
