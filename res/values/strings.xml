@@ -10,6 +10,7 @@
     
     <string name="search"> 速查</string>
     <string name="search_element">速查元素</string>
+    	<string name="search_element_des">请输入任一属性：</string>
     <string name="search_compound">速查化合物</string>
     <string name="search_equation">速查化学方程式</string>
     

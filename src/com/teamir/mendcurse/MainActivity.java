@@ -21,36 +21,26 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		mSlideHolder = (SlideHolder) findViewById(R.id.slideHolder);
 		
 		//去掉状态栏
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		mSlideHolder = (SlideHolder) findViewById(R.id.slideHolder);
-		
-		
-		
-//		View toggleView = findViewById(R.id.textView);
-//		toggleView.setOnClickListener(new View.OnClickListener() {
-//			
-//			@Override
-//			public void onClick(View v) {
-//				mSlideHolder.toggle();
-//			}
-//		});
+
 		
 		//利用xmlParse处理类来获取所有元素对象。
 		XmlResourceParser xrp = this.getResources().getXml(R.xml.elements);
-		ArrayList<Element> elements = XmlParse.createData(xrp);
+		final ArrayList<Element> elements = XmlParse.createData(xrp);
 		
 		
-		
+		//将数据写到TextView
 		StringBuilder sb = new StringBuilder();
 		for(Element e:elements){
 			sb.append(e.toString()+"\n" + "---------------" + "\n");
-		}
-		
+		}		
 		TextView text = (TextView)findViewById(R.id.textView);
 		text.setText(sb);
-		
+
+
 		
 		
 		
@@ -68,29 +58,40 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent i = new Intent(MainActivity.this, MainActivity.class);
-				startActivity(i);
+				mSlideHolder.close();
+				
 			}
 			
 		});
 		
+		//速查元素按钮
+		Button searchElement = (Button)findViewById(R.id.search_element);
+		searchElement.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				mSlideHolder.close();			
+							
+				Intent intent = new Intent(MainActivity.this, SearchElement.class);
+				startActivity(intent);
+			}
+			
+		});		
+		
+		
+		
+		
 	}
-	
-	
-	
-	
-	
-	
+
 
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		//getMenuInflater().inflate(R.menu.main, menu);
+	
 		return true;
-	}
-	
-	
+	}	
 	
 	private SlideHolder mSlideHolder;
 
