@@ -1,6 +1,5 @@
 package com.teamir.mendcurse;
 
-import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,7 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
+
 
 import com.agimind.widget.SlideHolder;
 
@@ -24,22 +23,7 @@ public class MainActivity extends Activity {
 		mSlideHolder = (SlideHolder) findViewById(R.id.slideHolder);
 		
 		//去掉状态栏
-		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-		//从AppData类中取数据
-		AppData appData = (AppData)getApplication();
-		final ArrayList<Element> elements = appData.getElements();
-		
-		//将数据写到TextView
-		StringBuilder sb = new StringBuilder();
-		for(Element e:elements){
-			sb.append(e.toString()+"\n" + "---------------" + "\n");
-		}		
-		TextView text = (TextView)findViewById(R.id.textView);
-		text.setText(sb);	
-		
-		
-		
+		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);	
 		
 		
 		
@@ -52,20 +36,20 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				mSlideHolder.close();
+				Intent intent = new Intent(MainActivity.this, Table.class);
+				startActivity(intent);
 				
 			}
 			
 		});
 		
-		//速查元素按钮
-		Button searchElement = (Button)findViewById(R.id.search_element);
+		//速查
+		Button searchElement = (Button)findViewById(R.id.search);
 		searchElement.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				mSlideHolder.close();			
+				// TODO Auto-generated method stub						
 							
 				Intent intent = new Intent(MainActivity.this, SearchElement.class);
 				startActivity(intent);
@@ -73,8 +57,55 @@ public class MainActivity extends Activity {
 			
 		});		
 		
+		//游戏
+		Button game = (Button)findViewById(R.id.game);
+		game.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub						
+				//Intent intent = new Intent(MainActivity.this, SearchElement.class);
+				//startActivity(intent);
+			}
+			
+		});		
+		
+		//趣闻
+		Button story = (Button)findViewById(R.id.story);
+		story.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub						
+				//Intent intent = new Intent(MainActivity.this, SearchElement.class);
+				//startActivity(intent);
+			}
+			
+		});		
 		
 		
+		/************************************侧滑菜单键*******************************/
+		Button about = (Button)findViewById(R.id.about);
+		about.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub						
+				mSlideHolder.close();
+			}
+			
+		});	
+		
+		Button setting = (Button)findViewById(R.id.setting);
+		setting.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub						
+				mSlideHolder.close();
+			}
+			
+		});
 		
 	}
 	
