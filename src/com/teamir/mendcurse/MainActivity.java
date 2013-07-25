@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.XmlResourceParser;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -26,11 +26,9 @@ public class MainActivity extends Activity {
 		//去掉状态栏
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-		
-		//利用xmlParse处理类来获取所有元素对象。
-		XmlResourceParser xrp = this.getResources().getXml(R.xml.elements);
-		final ArrayList<Element> elements = XmlParse.createData(xrp);
-		
+		//从AppData类中取数据
+		AppData appData = (AppData)getApplication();
+		final ArrayList<Element> elements = appData.getElements();
 		
 		//将数据写到TextView
 		StringBuilder sb = new StringBuilder();
@@ -38,11 +36,7 @@ public class MainActivity extends Activity {
 			sb.append(e.toString()+"\n" + "---------------" + "\n");
 		}		
 		TextView text = (TextView)findViewById(R.id.textView);
-		text.setText(sb);
-
-
-		
-		
+		text.setText(sb);	
 		
 		
 		
@@ -83,13 +77,26 @@ public class MainActivity extends Activity {
 		
 		
 	}
+	
+	
+	
 
+	/*************************************监听菜单键*******************************/
 
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	     if(keyCode == KeyEvent.KEYCODE_MENU) {
+	        // 监控菜单键
+	        mSlideHolder.toggle();
+	        return false;
+	    }
+	    return super.onKeyDown(keyCode, event);
+	}
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-	
+
 		return true;
 	}	
 	
