@@ -78,8 +78,8 @@
 			            android:text="@string/game" />
 			        
 			         <Button
-			            android:id="@+id/story"
-			            android:text="@string/story" />
+			            android:id="@+id/calc"
+			            android:text="@string/calc" />
 			     </TableRow> 
          	</TableLayout>
          
