@@ -23,6 +23,10 @@ public class AppData extends Application {
     }
 	
 	
+	public Element getElement(int index){
+		return elements.get(index - 1);
+	}
+	
 	public ArrayList<Element> getElements() {
 		return elements;
 	}

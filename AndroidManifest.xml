@@ -41,6 +41,11 @@
             android:name="com.teamir.mendcurse.Table"
             android:label="@string/app_name" >            
         </activity>
+        <activity
+            android:screenOrientation="landscape"
+            android:theme="@style/android:style/Theme.Dialog"
+            android:name="com.teamir.mendcurse.ItemView" />            
+
     </application>
 
 </manifest>
