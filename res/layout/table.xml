@@ -19,6 +19,7 @@
        android:layout_height="fill_parent">
                     <LinearLayout 
                         android:orientation="vertical" 
+                        android:layout_gravity="center"
                         android:layout_width="fill_parent" 
                         android:layout_height="fill_parent">
                         
@@ -33,7 +34,7 @@
                                 <com.teamir.mendcurse.MyView						        
 							        myViewXmlns:elementId ="1"
 							        myViewXmlns:elementSymbol = "H"
-							        style="@style/table_item" />
+							        style="@style/item_a" />
                                 <TextView   style="@style/table_blank"/>                              
                                 <TextView   style="@style/table_blank"/>
                                 <TextView   style="@style/table_blank"/>
@@ -54,18 +55,18 @@
 							    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="2"
 							        myViewXmlns:elementSymbol = "He"
-							        style="@style/table_item" />							    
+							        style="@style/item_k" />							    
 							</TableRow>
 							
                         	<TableRow>
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="3"
 							        myViewXmlns:elementSymbol = "Li"
-							        style="@style/table_item" />
+							        style="@style/item_b" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="4"
 							        myViewXmlns:elementSymbol = "Be"
-							        style="@style/table_item" />
+							        style="@style/item_c" />
                         	    
                         	    <TextView   style="@style/table_blank"/>
                                 <TextView   style="@style/table_blank"/>
@@ -81,27 +82,27 @@
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="5"
 							        myViewXmlns:elementSymbol = "B"
-							        style="@style/table_item" />
+							        style="@style/item_e" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="6"
 							        myViewXmlns:elementSymbol = "C"
-							        style="@style/table_item" />
+							        style="@style/item_i" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="7"
 							        myViewXmlns:elementSymbol = "N"
-							        style="@style/table_item" />
+							        style="@style/item_i" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="8"
 							        myViewXmlns:elementSymbol = "O"
-							        style="@style/table_item" />
+							        style="@style/item_i" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="9"
 							        myViewXmlns:elementSymbol = "F"
-							        style="@style/table_item" />
+							        style="@style/item_j" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="10"
 							        myViewXmlns:elementSymbol = "Ne"
-							        style="@style/table_item" />
+							        style="@style/item_k" />
                         	</TableRow>
                         	
                         	<TableRow>         	    
@@ -109,11 +110,11 @@
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="11"
 							        myViewXmlns:elementSymbol = "Na"
-							        style="@style/table_item" />
+							        style="@style/item_b" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="12"
 							        myViewXmlns:elementSymbol = "Mg"
-							        style="@style/table_item" />
+							        style="@style/item_c" />
                         	    
 								<!-- 十个空格 -->
                         	    <TextView   style="@style/table_blank"/>
@@ -131,28 +132,28 @@
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="13"
 							        myViewXmlns:elementSymbol = "Al"
-							        style="@style/table_item" />
+							        style="@style/item_f" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="14"
 							        myViewXmlns:elementSymbol = "Si"
-							        style="@style/table_item" />
+							        style="@style/item_e" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="15"
 							        myViewXmlns:elementSymbol = "P"
-							        style="@style/table_item" />
+							        style="@style/item_i" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="16"
 							        myViewXmlns:elementSymbol = "S"
-							        style="@style/table_item" />
+							        style="@style/item_i" />
                         	    
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="17"
 							        myViewXmlns:elementSymbol = "Cl"
-							        style="@style/table_item" />
+							        style="@style/item_j" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="18"
 							        myViewXmlns:elementSymbol = "Ar"
-							        style="@style/table_item" />
+							        style="@style/item_k" />
                         	</TableRow>
                         	
                         	
@@ -161,83 +162,83 @@
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="19"
 							        myViewXmlns:elementSymbol = "K"
-							        style="@style/table_item" />
+							        style="@style/item_b" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="20"
 							        myViewXmlns:elementSymbol = "Ca"
-							        style="@style/table_item" />
+							        style="@style/item_c" />
                         	    
 								
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="21"
 							        myViewXmlns:elementSymbol = "Sc"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="22"
 							        myViewXmlns:elementSymbol = "Ti"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="23"
 							        myViewXmlns:elementSymbol = "V"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="24"
 							        myViewXmlns:elementSymbol = "Cr"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    
                         	    
                                 <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="25"
 							        myViewXmlns:elementSymbol = "Mn"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="26"
 							        myViewXmlns:elementSymbol = "Fe"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="27"
 							        myViewXmlns:elementSymbol = "Co"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="28"
 							        myViewXmlns:elementSymbol = "Ni"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="29"
 							        myViewXmlns:elementSymbol = "Cu"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="30"
 							        myViewXmlns:elementSymbol = "Zn"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    
                         	    
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="31"
 							        myViewXmlns:elementSymbol = "Ga"
-							        style="@style/table_item" />
+							        style="@style/item_f" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="32"
 							        myViewXmlns:elementSymbol = "Ge"
-							        style="@style/table_item" />
+							        style="@style/item_e" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="33"
 							        myViewXmlns:elementSymbol = "As"
-							        style="@style/table_item" />
+							        style="@style/item_e" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="34"
 							        myViewXmlns:elementSymbol = "Se"
-							        style="@style/table_item" />
+							        style="@style/item_i" />
                         	    
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="35"
 							        myViewXmlns:elementSymbol = "Br"
-							        style="@style/table_item" />
+							        style="@style/item_j" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="36"
 							        myViewXmlns:elementSymbol = "kr"
-							        style="@style/table_item" />
+							        style="@style/item_k" />
                         	</TableRow>
                         	
                         	<TableRow>         	    
@@ -245,248 +246,243 @@
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="37"
 							        myViewXmlns:elementSymbol = "Rb"
-							        style="@style/table_item" />
+							        style="@style/item_b" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="38"
 							        myViewXmlns:elementSymbol = "Sr"
-							        style="@style/table_item" />
+							        style="@style/item_c" />
                         	   
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="39"
 							        myViewXmlns:elementSymbol = "Y"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="40"
 							        myViewXmlns:elementSymbol = "Zr"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="41"
 							        myViewXmlns:elementSymbol = "Nb"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="42"
 							        myViewXmlns:elementSymbol = "Mo"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    
                         	    
                                 <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="43"
 							        myViewXmlns:elementSymbol = "Tc"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="44"
 							        myViewXmlns:elementSymbol = "Ru"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="45"
 							        myViewXmlns:elementSymbol = "Rh"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="46"
 							        myViewXmlns:elementSymbol = "Pd"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="47"
 							        myViewXmlns:elementSymbol = "Ag"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="48"
 							        myViewXmlns:elementSymbol = "Cd"
-							        style="@style/table_item" />
+							        style="@style/item_d" />
                         	    
                         	    
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="49"
 							        myViewXmlns:elementSymbol = "In"
-							        style="@style/table_item" />
+							        style="@style/item_f" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="50"
 							        myViewXmlns:elementSymbol = "Sn"
-							        style="@style/table_item" />
+							        style="@style/item_f" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="51"
 							        myViewXmlns:elementSymbol = "Sb"
-							        style="@style/table_item" />
+							        style="@style/item_e" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="52"
 							        myViewXmlns:elementSymbol = "Te"
-							        style="@style/table_item" />
+							        style="@style/item_e" />
                         	    
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="53"
 							        myViewXmlns:elementSymbol = "I"
-							        style="@style/table_item" />
+							        style="@style/item_j" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="54"
 							        myViewXmlns:elementSymbol = "Xe"
-							        style="@style/table_item" />
+							        style="@style/item_k" />
                         	</TableRow>
                         	
                         	<TableRow>         	    
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="37"
-							        myViewXmlns:elementSymbol = "Rb"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="55"
+							        myViewXmlns:elementSymbol = "Cs"
+							        style="@style/item_b" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="38"
-							        myViewXmlns:elementSymbol = "Sr"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="56"
+							        myViewXmlns:elementSymbol = "Ba"
+							        style="@style/item_c" />
                         	   
+                        	    <TextView style="@style/table_other1" />                        	    
+                        	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="39"
-							        myViewXmlns:elementSymbol = "Y"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="72"
+							        myViewXmlns:elementSymbol = "Hf"
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="40"
-							        myViewXmlns:elementSymbol = "Zr"
-							        style="@style/table_item" />
-                        	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="41"
-							        myViewXmlns:elementSymbol = "Nb"
-							        style="@style/table_item" />
-                        	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="42"
-							        myViewXmlns:elementSymbol = "Mo"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="73"
+							        myViewXmlns:elementSymbol = "Ta"
+							        style="@style/item_d" />
                         	    
                         	    
                                 <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="43"
-							        myViewXmlns:elementSymbol = "Tc"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="74"
+							        myViewXmlns:elementSymbol = "W"
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="44"
-							        myViewXmlns:elementSymbol = "Ru"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="75"
+							        myViewXmlns:elementSymbol = "Re"
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="45"
-							        myViewXmlns:elementSymbol = "Rh"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="76"
+							        myViewXmlns:elementSymbol = "Os"
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="46"
-							        myViewXmlns:elementSymbol = "Pd"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="77"
+							        myViewXmlns:elementSymbol = "Ir"
+							        style="@style/item_d" />
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="47"
-							        myViewXmlns:elementSymbol = "Ag"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="78"
+							        myViewXmlns:elementSymbol = "Pt"
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="48"
-							        myViewXmlns:elementSymbol = "Cd"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="79"
+							        myViewXmlns:elementSymbol = "Au"
+							        style="@style/item_d" />
                         	    
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="49"
-							        myViewXmlns:elementSymbol = "In"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="80"
+							        myViewXmlns:elementSymbol = "Hg"
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="50"
-							        myViewXmlns:elementSymbol = "Sn"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="81"
+							        myViewXmlns:elementSymbol = "Tl"
+							        style="@style/item_f" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="51"
-							        myViewXmlns:elementSymbol = "Sb"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="82"
+							        myViewXmlns:elementSymbol = "Pb"
+							        style="@style/item_f" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="52"
-							        myViewXmlns:elementSymbol = "Te"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="83"
+							        myViewXmlns:elementSymbol = "Bi"
+							        style="@style/item_f" />
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="53"
-							        myViewXmlns:elementSymbol = "I"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="84"
+							        myViewXmlns:elementSymbol = "Po"
+							        style="@style/item_e" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="54"
-							        myViewXmlns:elementSymbol = "Xe"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="85"
+							        myViewXmlns:elementSymbol = "At"
+							        style="@style/item_j" />
+                        	    <com.teamir.mendcurse.MyView
+							        myViewXmlns:elementId ="86"
+							        myViewXmlns:elementSymbol = "Rn"
+							        style="@style/item_k" />
                         	</TableRow>
                         	
                         	<TableRow>         	    
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="37"
-							        myViewXmlns:elementSymbol = "Rb"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="87"
+							        myViewXmlns:elementSymbol = "Fr"
+							        style="@style/item_b" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="38"
-							        myViewXmlns:elementSymbol = "Sr"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="88"
+							        myViewXmlns:elementSymbol = "Ra"
+							        style="@style/item_c" />
                         	   
+                        	    <TextView style="@style/table_other2" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="39"
-							        myViewXmlns:elementSymbol = "Y"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="104"
+							        myViewXmlns:elementSymbol = "Rf"
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="40"
-							        myViewXmlns:elementSymbol = "Zr"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="105"
+							        myViewXmlns:elementSymbol = "Db"
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="41"
-							        myViewXmlns:elementSymbol = "Nb"
-							        style="@style/table_item" />
-                        	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="42"
-							        myViewXmlns:elementSymbol = "Mo"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="106"
+							        myViewXmlns:elementSymbol = "Sg"
+							        style="@style/item_d" />
                         	    
                         	    
                                 <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="43"
-							        myViewXmlns:elementSymbol = "Tc"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="107"
+							        myViewXmlns:elementSymbol = "Bh"
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="44"
-							        myViewXmlns:elementSymbol = "Ru"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="108"
+							        myViewXmlns:elementSymbol = "Hs"
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="45"
-							        myViewXmlns:elementSymbol = "Rh"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="109"
+							        myViewXmlns:elementSymbol = "Mt"
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="46"
-							        myViewXmlns:elementSymbol = "Pd"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="110"
+							        myViewXmlns:elementSymbol = "Ds"
+							        style="@style/item_d" />
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="47"
-							        myViewXmlns:elementSymbol = "Ag"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="111"
+							        myViewXmlns:elementSymbol = "Rg"
+							        style="@style/item_d" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="48"
-							        myViewXmlns:elementSymbol = "Cd"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="112"
+							        myViewXmlns:elementSymbol = "Cn"
+							        style="@style/item_d" />
                         	    
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="49"
-							        myViewXmlns:elementSymbol = "In"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="113"
+							        myViewXmlns:elementSymbol = "Uut"
+							        style="@style/item_f" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="50"
-							        myViewXmlns:elementSymbol = "Sn"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="114"
+							        myViewXmlns:elementSymbol = "Fl"
+							        style="@style/item_f" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="51"
-							        myViewXmlns:elementSymbol = "Sb"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="115"
+							        myViewXmlns:elementSymbol = "Uup"
+							        style="@style/item_f" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="52"
-							        myViewXmlns:elementSymbol = "Te"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="116"
+							        myViewXmlns:elementSymbol = "Lv"
+							        style="@style/item_f" />
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="53"
-							        myViewXmlns:elementSymbol = "I"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="117"
+							        myViewXmlns:elementSymbol = "Uus"
+							        style="@style/item_j" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="54"
-							        myViewXmlns:elementSymbol = "Xe"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="118"
+							        myViewXmlns:elementSymbol = "Uuo"
+							        style="@style/item_k" />
                         	</TableRow>
                         	
                         	<TableRow>
@@ -496,143 +492,143 @@
                         	<TableRow >
                         	    <TextView   style="@style/table_blank"/>
                         	    <TextView   style="@style/table_blank"/>
-                        	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="40"
-							        myViewXmlns:elementSymbol = "Zr"
-							        style="@style/table_item" />
-                        	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="41"
-							        myViewXmlns:elementSymbol = "Nb"
-							        style="@style/table_item" />
-                        	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="42"
-							        myViewXmlns:elementSymbol = "Mo"
-							        style="@style/table_item" />
-                        	    
+                        	                          	    
                         	    
                                 <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="43"
-							        myViewXmlns:elementSymbol = "Tc"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="57"
+							        myViewXmlns:elementSymbol = "La"
+							        style="@style/item_g" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="44"
-							        myViewXmlns:elementSymbol = "Ru"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="58"
+							        myViewXmlns:elementSymbol = "Ce"
+							        style="@style/item_g" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="45"
-							        myViewXmlns:elementSymbol = "Rh"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="59"
+							        myViewXmlns:elementSymbol = "Pr"
+							        style="@style/item_g" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="46"
-							        myViewXmlns:elementSymbol = "Pd"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="60"
+							        myViewXmlns:elementSymbol = "Nd"
+							        style="@style/item_g" />
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="47"
-							        myViewXmlns:elementSymbol = "Ag"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="61"
+							        myViewXmlns:elementSymbol = "Pm"
+							        style="@style/item_g" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="48"
-							        myViewXmlns:elementSymbol = "Cd"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="62"
+							        myViewXmlns:elementSymbol = "Sm"
+							        style="@style/item_g" />
                         	    
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="49"
-							        myViewXmlns:elementSymbol = "In"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="63"
+							        myViewXmlns:elementSymbol = "Eu"
+							        style="@style/item_g" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="50"
-							        myViewXmlns:elementSymbol = "Sn"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="64"
+							        myViewXmlns:elementSymbol = "Gd"
+							        style="@style/item_g" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="51"
+							        myViewXmlns:elementId ="65"
 							        myViewXmlns:elementSymbol = "Sb"
-							        style="@style/table_item" />
+							        style="@style/item_g" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="52"
+							        myViewXmlns:elementId ="66"
 							        myViewXmlns:elementSymbol = "Te"
-							        style="@style/table_item" />
+							        style="@style/item_g" />
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="53"
+							        myViewXmlns:elementId ="67"
 							        myViewXmlns:elementSymbol = "I"
-							        style="@style/table_item" />
+							        style="@style/item_g" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="54"
+							        myViewXmlns:elementId ="68"
 							        myViewXmlns:elementSymbol = "Xe"
-							        style="@style/table_item" />
+							        style="@style/item_g" />
+                        	    <com.teamir.mendcurse.MyView
+							        myViewXmlns:elementId ="69"
+							        myViewXmlns:elementSymbol = "Tm"
+							        style="@style/item_g" />
+                        	    <com.teamir.mendcurse.MyView
+							        myViewXmlns:elementId ="70"
+							        myViewXmlns:elementSymbol = "Yb"
+							        style="@style/item_g" />
+                        	    <com.teamir.mendcurse.MyView
+							        myViewXmlns:elementId ="71"
+							        myViewXmlns:elementSymbol = "Lu"
+							        style="@style/item_g" />
                         	</TableRow>
                         	
                         	<TableRow >
                         	    <TextView   style="@style/table_blank"/>
                         	    <TextView   style="@style/table_blank"/>
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="40"
-							        myViewXmlns:elementSymbol = "Zr"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="89"
+							        myViewXmlns:elementSymbol = "Ac"
+							        style="@style/item_h" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="41"
-							        myViewXmlns:elementSymbol = "Nb"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="90"
+							        myViewXmlns:elementSymbol = "Th"
+							        style="@style/item_h" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="42"
-							        myViewXmlns:elementSymbol = "Mo"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="91"
+							        myViewXmlns:elementSymbol = "Pa"
+							        style="@style/item_h" />
                         	    
                         	    
                                 <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="43"
-							        myViewXmlns:elementSymbol = "Tc"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="92"
+							        myViewXmlns:elementSymbol = "U"
+							        style="@style/item_h" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="44"
-							        myViewXmlns:elementSymbol = "Ru"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="93"
+							        myViewXmlns:elementSymbol = "Np"
+							        style="@style/item_h" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="45"
-							        myViewXmlns:elementSymbol = "Rh"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="94"
+							        myViewXmlns:elementSymbol = "Pu"
+							        style="@style/item_h" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="46"
-							        myViewXmlns:elementSymbol = "Pd"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="95"
+							        myViewXmlns:elementSymbol = "Am"
+							        style="@style/item_h" />
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="47"
-							        myViewXmlns:elementSymbol = "Ag"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="96"
+							        myViewXmlns:elementSymbol = "Cm"
+							        style="@style/item_h" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="48"
-							        myViewXmlns:elementSymbol = "Cd"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="97"
+							        myViewXmlns:elementSymbol = "Bk"
+							        style="@style/item_h" />
                         	    
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="49"
-							        myViewXmlns:elementSymbol = "In"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="98"
+							        myViewXmlns:elementSymbol = "Cf"
+							        style="@style/item_h" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="50"
-							        myViewXmlns:elementSymbol = "Sn"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="99"
+							        myViewXmlns:elementSymbol = "Es"
+							        style="@style/item_h" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="51"
-							        myViewXmlns:elementSymbol = "Sb"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="100"
+							        myViewXmlns:elementSymbol = "Fm"
+							        style="@style/item_h" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="52"
-							        myViewXmlns:elementSymbol = "Te"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="101"
+							        myViewXmlns:elementSymbol = "Md"
+							        style="@style/item_h" />
                         	    
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="53"
-							        myViewXmlns:elementSymbol = "I"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="102"
+							        myViewXmlns:elementSymbol = "No"
+							        style="@style/item_h" />
                         	    <com.teamir.mendcurse.MyView
-							        myViewXmlns:elementId ="54"
-							        myViewXmlns:elementSymbol = "Xe"
-							        style="@style/table_item" />
+							        myViewXmlns:elementId ="103"
+							        myViewXmlns:elementSymbol = "Lr"
+							        style="@style/item_h" />
                         	</TableRow>
                         	
                         </TableLayout>

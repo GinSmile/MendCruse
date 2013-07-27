@@ -42,6 +42,9 @@ public class MyView extends View{
 	        Log.v("分辨率", displayMetrics.widthPixels + " " + displayMetrics.heightPixels );
 	        
 	        setIdX((int)(displayMetrics.widthPixels*0.05/2));
+	        if(Integer.parseInt(elementId) >= 100){
+	        	setIdX((int)(displayMetrics.widthPixels*0.05/3));
+	        }
         	setIdY((int)(displayMetrics.heightPixels*0.07/2));
         	setSymbolX(0);
         	setSymbolY((int)(displayMetrics.heightPixels*0.07));
