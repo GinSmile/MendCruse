@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -21,14 +21,15 @@
     <style name="table_blank">
         <item name="android:layout_height">25dip</item>
         <item name="android:layout_width">25dip</item>
-        <item name="android:background">#555555</item>        
+        <item name="android:alpha">0</item>        
         <item name="android:layout_margin">1.0px</item>
     </style>
+    
     <style name="table_blank_small">
-        <item name="android:layout_height">25dip</item>
-        <item name="android:layout_width">10dip</item>
-        <item name="android:background">#555555</item>
-        <item name="android:layout_margin">1.0px</item>
+	    <item name="android:layout_height">5dip</item>
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:alpha">0</item>        
+	    <item name="android:layout_margin">1.0px</item>
     </style>
     
      <style name="table_item">
@@ -37,10 +38,26 @@
         <item name="android:textSize">10.0sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:background">@drawable/a</item>
-        <item name="android:textColor">#ff000000</item>
+        <item name="android:textColor">#000000</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_margin">1.0px</item>    
     </style>
+    
+     <style name = "table_other1">
+         <item name="android:layout_height">25dip</item>
+        <item name="android:layout_width">25dip</item>
+        <item name="android:alpha">0.7</item>        
+        <item name="android:layout_margin">1.0px</item>
+        <item name="android:background">@drawable/e</item>
+         </style>
+         
+     <style name = "table_other2">
+         <item name="android:layout_height">25dip</item>
+        <item name="android:layout_width">25dip</item>
+        <item name="android:alpha">0.7</item>        
+        <item name="android:layout_margin">1.0px</item>
+        <item name="android:background">@drawable/f</item>
+      </style>
     
 </resources>
 
