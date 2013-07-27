@@ -70,8 +70,8 @@ public class MainActivity extends Activity {
 			
 		});		
 		
-		//趣闻
-		Button story = (Button)findViewById(R.id.story);
+		//分子量计算
+		Button story = (Button)findViewById(R.id.calc);
 		story.setOnClickListener(new OnClickListener(){
 
 			@Override
