@@ -80,10 +80,12 @@
     
      <style name = "table_other1" parent="table_blank">
         <item name="android:background">@drawable/g</item>
+        <item name="android:alpha">1</item> 
          </style>
          
      <style name = "table_other2" parent="table_blank">
         <item name="android:background">@drawable/h</item>
+        <item name="android:alpha">1</item> 
       </style>
     
 </resources>

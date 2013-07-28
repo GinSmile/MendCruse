@@ -86,15 +86,15 @@
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="6"
 							        myViewXmlns:elementSymbol = "C"
-							        style="@style/item_i" />
+							        style="@style/item_a" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="7"
 							        myViewXmlns:elementSymbol = "N"
-							        style="@style/item_i" />
+							        style="@style/item_a" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="8"
 							        myViewXmlns:elementSymbol = "O"
-							        style="@style/item_i" />
+							        style="@style/item_a" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="9"
 							        myViewXmlns:elementSymbol = "F"
@@ -140,11 +140,11 @@
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="15"
 							        myViewXmlns:elementSymbol = "P"
-							        style="@style/item_i" />
+							        style="@style/item_a" />
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="16"
 							        myViewXmlns:elementSymbol = "S"
-							        style="@style/item_i" />
+							        style="@style/item_a" />
                         	    
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="17"
@@ -229,7 +229,7 @@
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="34"
 							        myViewXmlns:elementSymbol = "Se"
-							        style="@style/item_i" />
+							        style="@style/item_a" />
                         	    
                         	    <com.teamir.mendcurse.MyView
 							        myViewXmlns:elementId ="35"
