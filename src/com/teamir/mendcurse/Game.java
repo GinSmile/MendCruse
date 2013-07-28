@@ -345,6 +345,12 @@ public class Game extends Activity {
 			options[i].setBackgroundResource(R.color.lightblue);
 		}
 	}
-	
+	//重写返回键事件
+		public void onBackPressed()
+		{
+			timer.cancel();
+			finish();
+			System.exit(0);
+		}
 
 }
