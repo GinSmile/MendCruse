@@ -64,14 +64,14 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub						
-				//Intent intent = new Intent(MainActivity.this, SearchElement.class);
-				//startActivity(intent);
+				Intent intent = new Intent(MainActivity.this, Game.class);
+				startActivity(intent);
 			}
 			
 		});		
 		
-		//趣闻
-		Button story = (Button)findViewById(R.id.story);
+		//分子量计算
+		Button story = (Button)findViewById(R.id.calc);
 		story.setOnClickListener(new OnClickListener(){
 
 			@Override
