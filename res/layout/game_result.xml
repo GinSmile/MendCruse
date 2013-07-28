@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center_horizontal"
+	>
+	<RelativeLayout 
+        android:id="@+id/game_rel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        >
+        <!-- the top -->
+    <LinearLayout 
+        android:id="@+id/gamres_stat"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:background="#9f000000"
+        android:layout_margin="10px"
+        >
+        
+        <TextView 
+            android:id="@+id/gamres_tolsco"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:text="总分: "
+            android:textColor="#fff"
+            android:layout_margin="2px"
+            />
+        <TextView 
+            android:id="@+id/gamres_rigques"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:text="答对个数: " 
+            android:textColor="#fff"
+            android:layout_margin="2px"
+            />
+        <TextView 
+            android:id="@+id/gamres_wroques"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:text="答错个数: "
+            android:textColor="#fff"
+            android:layout_margin="2px"
+            />
+    </LinearLayout> 
+    <Button 
+        android:id="@+id/gamres_playagain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10px"
+        android:text="play again"
+        android:layout_below="@id/gamres_stat"
+        />
+    <Button 
+        android:id="@+id/gamres_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10px"
+        android:text="back"
+        android:layout_below="@id/gamres_playagain"
+        />
+	</RelativeLayout>
+</LinearLayout>
