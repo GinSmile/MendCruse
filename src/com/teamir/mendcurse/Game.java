@@ -73,7 +73,8 @@ public class Game extends Activity {
 							timer.wait();
 						}catch(Exception e){
 							e.printStackTrace();
-						}						
+						}	
+						resetListener(false);
 						//暂停让用户看到结果
 						try {
 							Thread.sleep(800);
@@ -93,7 +94,6 @@ public class Game extends Activity {
 						gameover();
 						if(!tmpflag)
 							setquesAndoption();
-						
 					}
 				}
 				//时间未到用户作出选择
@@ -106,11 +106,11 @@ public class Game extends Activity {
 					}
 					//暂停让用户看到结果
 					try {
-						Thread.sleep(800);
+						Thread.sleep(800);						
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
-					}
+					}					
 					//开始下一题
 					//获取timer对象锁
 					synchronized(timer)
@@ -219,6 +219,20 @@ public class Game extends Activity {
 			startActivityForResult(i,0);
 			
 		}
+	}
+	//reset选项监听器，防止用户在暂停期间刷选项
+	public void resetListener(boolean isset)
+	{
+		if(isset)
+			for (int i = 0;i<4;i++)
+			{
+				options[i].setOnClickListener(new GameOptionListener(i,Game.this));
+				options[i].setClickable(true);
+				options[i].setBackgroundResource(R.color.lightblue);
+			}
+		else
+			for (int i = 0;i<4;i++)
+				options[i].setOnClickListener(null);	
 	}
 
 	//等待结果activity返回重新开始还是结束
@@ -338,12 +352,13 @@ public class Game extends Activity {
 		}
 		
 		//最后设置监听器和背景
-		for (int i = 0;i<4;i++)
+		resetListener(true);
+/*		for (int i = 0;i<4;i++)
 		{
 			options[i].setOnClickListener(new GameOptionListener(i,Game.this));
 			options[i].setClickable(true);
 			options[i].setBackgroundResource(R.color.lightblue);
-		}
+		}*/
 	}
 	//重写返回键事件
 		public void onBackPressed()
