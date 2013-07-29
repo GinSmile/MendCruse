@@ -16,6 +16,8 @@ public class GameOptionListener implements OnClickListener
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
+		//移除监听器防止用户在暂停期间刷新
+		ga.resetListener(false);
 		//显示结果
 		ga.judge(ga.rightoption, thisoption,true);
 		//更新得分
