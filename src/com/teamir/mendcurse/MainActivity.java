@@ -13,6 +13,8 @@ import android.widget.Button;
 
 
 import com.agimind.widget.SlideHolder;
+import com.teamir.mendcurse.search.SearchElement;
+import com.teamir.mendcurse.table.Table;
 
 public class MainActivity extends Activity {
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myViewXmlns="http://schemas.android.com/apk/res/com.teamir.mendcurse"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="5dip" >
+
+        <com.teamir.mendcurse.table.MyView
+            android:id="@+id/element_left_pic"
+            android:layout_width="200dip"
+            android:layout_height="200dip"
+            myViewXmlns:elementId ="1"
+			myViewXmlns:elementSymbol = "H"
+			style="@style/item_a"
+            android:layout_gravity="center_vertical"            
+            android:layout_marginLeft="20dip" />
+
+<!-- 		<ImageView -->
+<!-- 		    android:layout_width="200dip" -->
+<!-- 		    android:layout_height="200dip" -->
+<!-- 		    android:src="@drawable/e" > -->
+  
+<!-- 		</ImageView> -->
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dip"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="200dip"
+                android:layout_height="200dip"                
+                android:orientation="vertical" >
+                <TextView
+                    android:layout_width="200dip"
+                	android:layout_height="wrap_content"
+                	android:id="@+id/element_attr"/>
+                <TextView
+                    android:layout_width="200dip"
+                	android:layout_height="20dip"
+                	android:text="more detail"
+                	android:id="@+id/wiki_btn"
+                    />
+
+                <WebView
+                    android:id="@+id/wiki"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </ScrollView>
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,8 +1,13 @@
-package com.teamir.mendcurse;
+package com.teamir.mendcurse.search;
 
 import java.util.ArrayList;
 
 import com.agimind.widget.SlideHolder;
+import com.teamir.mendcurse.AppData;
+import com.teamir.mendcurse.Element;
+import com.teamir.mendcurse.R;
+import com.teamir.mendcurse.R.id;
+import com.teamir.mendcurse.R.layout;
 
 import android.app.Activity;
 import android.os.Bundle;

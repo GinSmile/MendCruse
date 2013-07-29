@@ -1,4 +1,4 @@
-package com.teamir.mendcurse;
+package com.teamir.mendcurse.table;
 
 import java.util.ArrayList;
 
@@ -8,6 +8,9 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.agimind.widget.SlideHolder;
+import com.teamir.mendcurse.R;
+import com.teamir.mendcurse.R.id;
+import com.teamir.mendcurse.R.layout;
 
 public class Table extends Activity{
 

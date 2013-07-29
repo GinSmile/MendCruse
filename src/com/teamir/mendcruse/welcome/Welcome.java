@@ -1,4 +1,8 @@
-package com.teamir.mendcurse;
+package com.teamir.mendcruse.welcome;
+
+import com.teamir.mendcurse.MainActivity;
+import com.teamir.mendcurse.R;
+import com.teamir.mendcurse.R.layout;
 
 import android.app.Activity;
 import android.content.Intent;
