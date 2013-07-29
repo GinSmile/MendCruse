@@ -1,40 +1,69 @@
 package com.teamir.mendcurse.table;
 
-import com.teamir.mendcurse.AppData;
-import com.teamir.mendcurse.Element;
-import com.teamir.mendcurse.R;
-import com.teamir.mendcurse.R.id;
-import com.teamir.mendcurse.R.layout;
+import java.io.IOException;
+import java.io.InputStream;
 
 import android.app.Activity;
-import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.view.WindowManager;
 import android.webkit.WebView;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.teamir.mendcurse.AppData;
+import com.teamir.mendcurse.Element;
+import com.teamir.mendcurse.R;
 
 public class ItemView  extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		//setContentView(new MyView(this));
+		String isPop = this.getIntent().getStringExtra("isPop");
+		if(isPop == null){
+			//SearchElement界面，非dialog形式
+			this.setTheme(R.style.AppTheme); 
+			Log.v("ddd", "非dialog形式");
+		}
+		super.onCreate(savedInstanceState);	
+		
+		if(isPop == null){
+			//去掉状态栏
+			this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+			
+		}
+		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.item_view);
 		
 		//从AppData类中取数据
 		AppData appData = (AppData)getApplication();
 		String index = getIntent().getStringExtra("index");
-		final Element element = appData.getElement(Integer.parseInt(index));
+		final Element element = appData.getElement(Integer.parseInt(index));		
+		//从assets取图片
+		ImageView image = (ImageView)findViewById(R.id.pic_left);
+		String imagePath = element.getElementid()+".jpg";
+		InputStream assetFile = null;
+		try{
+			AssetManager am = getAssets();
+			assetFile = am.open(imagePath);
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+		BitmapDrawable bitmapDrawable = (BitmapDrawable)image.getDrawable();
+		// 如果图片还未回收，先强制回收该图片  
+        if (bitmapDrawable != null && !bitmapDrawable.getBitmap().isRecycled()){  
+            bitmapDrawable.getBitmap().recycle();  
+        }
+        //改变图片
+		image.setImageBitmap(BitmapFactory.decodeStream(assetFile));
 		
-		
-		//更改MyView
-		//MyView myView = (MyView)findViewById(R.id.element_left_pic);
-		//myView.setElementId(element.getElementid());
-		//myView.setElementSymbol(element.getSymbol());
 		
 		//将数据写到TextView	
 		TextView text = (TextView)findViewById(R.id.element_attr);

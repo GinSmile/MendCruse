@@ -8,8 +8,10 @@ import com.teamir.mendcurse.Element;
 import com.teamir.mendcurse.R;
 import com.teamir.mendcurse.R.id;
 import com.teamir.mendcurse.R.layout;
+import com.teamir.mendcurse.table.ItemView;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -49,13 +51,13 @@ public class SearchElement extends Activity {
 					String elementAttr = seaEleSym.getText().toString();
 					for(Element e : elements){
 						if(e.symbol.equals(elementAttr)){
-							seaEleRes.setText(e.toString());
+							showItemDetail(e);
 							break;
 						}else if(e.elementid.equals(elementAttr)){
-							seaEleRes.setText(e.toString());
+							showItemDetail(e);
 							break;
 						}else if(e.elementname.equals(elementAttr)){
-							seaEleRes.setText(e.toString());
+							showItemDetail(e);
 							break;
 						}
 					}					
@@ -63,6 +65,13 @@ public class SearchElement extends Activity {
 			}
 			
 		});
+	}
+	
+	
+	private void showItemDetail(Element e){
+		Intent intent = new Intent(SearchElement.this, ItemView.class);
+		intent.putExtra("index", e.getElementid());							
+		startActivity(intent);
 	}
 	
 	

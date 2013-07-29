@@ -14,22 +14,21 @@
         android:paddingTop="10dip"
         android:paddingBottom="5dip" >
 
-        <com.teamir.mendcurse.table.MyView
-            android:id="@+id/element_left_pic"
-            android:layout_width="200dip"
-            android:layout_height="200dip"
-            myViewXmlns:elementId ="1"
-			myViewXmlns:elementSymbol = "H"
-			style="@style/item_a"
-            android:layout_gravity="center_vertical"            
-            android:layout_marginLeft="20dip" />
+<!--         <com.teamir.mendcurse.table.MyView -->
+<!--             android:id="@+id/element_left_pic" -->
+<!--             android:layout_width="200dip" -->
+<!--             android:layout_height="200dip" -->
+<!--             myViewXmlns:elementId ="1" -->
+<!-- 			myViewXmlns:elementSymbol = "H" -->
+<!-- 			style="@style/item_a" -->
+<!--             android:layout_gravity="center_vertical"             -->
+<!--             android:layout_marginLeft="20dip" /> -->
 
-<!-- 		<ImageView -->
-<!-- 		    android:layout_width="200dip" -->
-<!-- 		    android:layout_height="200dip" -->
-<!-- 		    android:src="@drawable/e" > -->
-  
-<!-- 		</ImageView> -->
+		<ImageView
+		    android:id="@+id/pic_left"
+		    android:layout_width="200dip"
+		    android:layout_height="200dip" >  
+		</ImageView>
 
         <ScrollView
             android:layout_width="wrap_content"

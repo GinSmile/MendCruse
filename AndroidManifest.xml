@@ -45,7 +45,7 @@
         </activity>
         <activity
             android:screenOrientation="landscape"
-            android:theme="@style/android:style/Theme.Dialog"
+            android:theme="@android:style/Theme.Dialog"
             android:name="com.teamir.mendcurse.table.ItemView" />      
             
          <activity

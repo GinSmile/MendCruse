@@ -95,6 +95,7 @@ public class MyView extends View {
 
 		Intent intent = new Intent(context, ItemView.class);
 		intent.putExtra("index", elementId.toString());
+		intent.putExtra("isPop", "yes");
 		context.startActivity(intent);
 		Log.v("onTouch", "+++1");
 
