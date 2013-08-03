@@ -1,4 +1,6 @@
-package com.teamir.mendcurse;
+package com.teamir.mendcurse.game;
+
+import com.teamir.mendcurse.*;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -31,8 +33,8 @@ public class GameResult extends Activity
 		i = getIntent();
 		Bundle data = i.getExtras();
 		tolscore = data.getInt("score");
-		rightc = data.getInt("rightc");
-		wrongc = data.getInt("wrongc");
+		rightc = data.getInt("correctc");
+		wrongc = data.getInt("incorrectc");
 		String scoreText = "总分: "+tolscore;
 		String rightcText = "答对个数: " + rightc;
 		String wrongcText = "答错个数: " + wrongc;

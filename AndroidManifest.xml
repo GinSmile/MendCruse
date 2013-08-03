@@ -50,12 +50,12 @@
             
          <activity
             android:screenOrientation="landscape"
-            android:name="com.teamir.mendcurse.Game"
+            android:name="com.teamir.mendcurse.game.Game"
             android:label="@string/app_name" >            
         </activity>
          <activity
             android:screenOrientation="landscape"
-            android:name="com.teamir.mendcurse.GameResult"
+            android:name="com.teamir.mendcurse.game.GameResult"
             android:label="@string/app_name" >            
         </activity>
        <activity
