@@ -12,42 +12,44 @@
 
         <LinearLayout
             android:layout_width="200dp"
-            android:layout_height="wrap_content"            
+            android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <Button
                 android:id="@+id/about"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/about"
-                android:textColor="@color/title_btn_text"
+                android:background="@drawable/btn_selector"
                 android:gravity="center_vertical|left"
-                android:background="@drawable/btn_selector" />
+                android:text="@string/about"
+                android:textColor="@color/title_btn_text" />
+
             <Button
                 android:id="@+id/setting"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/setting"
-                android:textColor="@color/title_btn_text"
+                android:background="@drawable/btn_selector"
                 android:gravity="center_vertical|left"
-                android:background="@drawable/btn_selector" />            
+                android:text="@string/setting"
+                android:textColor="@color/title_btn_text" />
         </LinearLayout>
     </ScrollView>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:padding="15dip"
-        android:orientation="horizontal" >
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        android:padding="15dip" >
 
         <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dip"
-        android:paddingRight="20dip"
-        android:orientation="vertical"           
-            >
-            
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip" >
+
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -56,35 +58,41 @@
                 android:gravity="center_horizontal"
                 android:text="@string/app_name"
                 android:textSize="24.5sp" />
-        
+
             <TableLayout
                 android:layout_width="wrap_content"
-        		android:layout_height="wrap_content"
-        		android:layout_gravity="center"
-        		android:stretchColumns="*" >
-        		
-                <TableRow>
-			         <Button
-			            android:id="@+id/all_element"
-			            android:text="@string/all_element" />
-			        
-			         <Button
-			            android:id="@+id/search"
-			            android:text="@string/search" />
-			     </TableRow>
-			     <TableRow >   
-			        <Button
-			            android:id="@+id/game"
-			            android:text="@string/game" />
-			        
-			         <Button
-			            android:id="@+id/calc"
-			            android:text="@string/calc" />
-			     </TableRow> 
-         	</TableLayout>
-         
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:stretchColumns="*" >
 
-         </LinearLayout>
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/all_element"
+                        android:background="@drawable/btn_selector"
+                        android:fadingEdge="horizontal|vertical"
+                        android:text="@string/all_element" />
+
+                    <Button
+                        android:id="@+id/search"
+                        android:background="@drawable/btn_selector"
+                        android:text="@string/search" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/game"
+                        android:background="@drawable/btn_selector"
+                        android:text="@string/game" />
+
+                    <Button
+                        android:id="@+id/calc"
+                        android:background="@drawable/btn_selector"
+                        android:text="@string/calc" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
     </LinearLayout>
 
 </com.agimind.widget.SlideHolder>

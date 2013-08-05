@@ -28,12 +28,13 @@ public class MyView extends View {
 	private int idY;
 	private Context context;
 
-	public MyView(Context context ,String elementId) {
+	public MyView(Context context, String elementId) {
 		super(context);
 		// TODO Auto-generated constructor stub
-		
+
 		this.elementId = elementId;
-		Element element = ((AppData)(((Activity)context).getApplication())).getElement(elementId);
+		Element element = ((AppData) (((Activity) context).getApplication()))
+				.getElement(elementId);
 		this.elementSymbol = element.getSymbol();
 		this.setBackgroundResource(R.drawable.a);
 	}
@@ -89,15 +90,15 @@ public class MyView extends View {
 
 		int[] arrayOfInt = new int[2];
 		getLocationOnScreen(arrayOfInt);
-		Toast toast = Toast.makeText(context, elementId.toString(),
-				Toast.LENGTH_SHORT);
-		toast.show();
+		// Toast toast = Toast.makeText(context, elementId.toString(),
+		// Toast.LENGTH_SHORT);
+		// toast.show();
 
 		Intent intent = new Intent(context, ItemView.class);
 		intent.putExtra("index", elementId.toString());
 		intent.putExtra("isPop", "yes");
 		context.startActivity(intent);
-		Log.v("onTouch", "+++1");
+		Log.v("onTouch", "触发一次onTouch");
 
 		return false;
 	}
