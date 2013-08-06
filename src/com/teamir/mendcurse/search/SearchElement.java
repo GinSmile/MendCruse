@@ -44,8 +44,8 @@ public class SearchElement extends Activity {
 				// TODO Auto-generated method stub				
 				Log.v("imp", "press btn search");				
 				
-				Animation to_big = AnimationUtils.loadAnimation(SearchElement.this, R.anim.to_big);
-				seaEleBtn.startAnimation(to_big);		
+//				Animation to_big = AnimationUtils.loadAnimation(SearchElement.this, R.anim.to_big);
+//				seaEleBtn.startAnimation(to_big);		
 				
 				
 				String elementAttr = seaEleSym.getText().toString().trim();

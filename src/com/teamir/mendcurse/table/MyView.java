@@ -11,7 +11,6 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
 
 import com.teamir.mendcurse.AppData;
 import com.teamir.mendcurse.Element;
@@ -32,11 +31,16 @@ public class MyView extends View {
 		super(context);
 		// TODO Auto-generated constructor stub
 
+		this.context = context;
 		this.elementId = elementId;
 		Element element = ((AppData) (((Activity) context).getApplication()))
 				.getElement(elementId);
 		this.elementSymbol = element.getSymbol();
-		this.setBackgroundResource(R.drawable.a);
+		
+	}
+	
+	public MyView(Context context, int elementId){
+		this(context, Integer.toString(elementId));
 	}
 
 	public MyView(Context context, AttributeSet attrs) {
@@ -69,7 +73,9 @@ public class MyView extends View {
 		TypedArray ta = context.obtainStyledAttributes(attrs,
 				R.styleable.tableViewAttr);
 		elementId = ta.getString(R.styleable.tableViewAttr_elementId);
-		elementSymbol = ta.getString(R.styleable.tableViewAttr_elementSymbol);
+		Element element = ((AppData) (((Activity) context).getApplication()))
+				.getElement(elementId);
+		this.setElementSymbol(element.getSymbol());
 		ta.recycle();
 	}
 
@@ -80,6 +86,7 @@ public class MyView extends View {
 		p.setAntiAlias(true);
 		p.setTextSize(15);
 
+		Log.v("测试","onDraw");
 		canvas.drawText(getElementId(), getIdX(), getIdY(), p);
 		canvas.drawText(getElementSymbol(), getSymbolX(), getSymbolY(), p);
 
@@ -90,9 +97,6 @@ public class MyView extends View {
 
 		int[] arrayOfInt = new int[2];
 		getLocationOnScreen(arrayOfInt);
-		// Toast toast = Toast.makeText(context, elementId.toString(),
-		// Toast.LENGTH_SHORT);
-		// toast.show();
 
 		Intent intent = new Intent(context, ItemView.class);
 		intent.putExtra("index", elementId.toString());

@@ -36,14 +36,14 @@ public class ItemView extends Activity {
 			Log.v("ddd", "非dialog形式");
 		}
 		super.onCreate(savedInstanceState);
-
-		if (isPop == null) {
-			// 去掉状态栏
-			this.getWindow().setFlags(
-					WindowManager.LayoutParams.FLAG_FULLSCREEN,
-					WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-		}
+//
+//		if (isPop == null) {
+//			// 去掉状态栏
+//			this.getWindow().setFlags(
+//					WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//					WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//
+//		}
 
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.item_view);
