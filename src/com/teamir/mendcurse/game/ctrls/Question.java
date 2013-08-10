@@ -9,7 +9,7 @@ public class Question
 	String option2 = null;
 	String option3 = null;
 	
-	public void Question()
+	public Question()
 	{
 		
 	}

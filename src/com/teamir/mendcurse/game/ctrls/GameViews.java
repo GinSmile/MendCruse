@@ -1,6 +1,5 @@
 package com.teamir.mendcurse.game.ctrls;
 
-import android.os.Handler;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
