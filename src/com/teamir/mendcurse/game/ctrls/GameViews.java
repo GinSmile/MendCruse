@@ -5,7 +5,7 @@ import android.widget.TextView;
 
 public class GameViews
 {
-	//ȫ�ֶ���
+	//需要动态修改的views
 	TextView Score;
 	TextView RemainQuesv;
 	TextView RemainTimesv;

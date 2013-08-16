@@ -7,8 +7,7 @@ import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.teamir.mendcurse.game.ctrls.GameController;
-import com.teamir.mendcurse.game.ctrls.GameViews;
+import com.teamir.mendcurse.game.ctrls.*;
 import com.teamir.mendcurse.R;
 
 
@@ -22,7 +21,7 @@ public class SinglePlayer extends Activity {
 	private TextView[] options = new TextView[4];   //4个选项view
 	
 	GameViews gv = null;
-	GameController gc = null;
+	sGameController sgc = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +47,10 @@ public class SinglePlayer extends Activity {
 		gv.setRmainTimesv(time);
 		gv.setTimeBar(timebar);
 		gv.setOptions(options);
-		gc = new GameController(gv,10,10,this);
-		gc.StartGame();	
+		Player player = new Player("anonymous");
+		player.setMyViews(options);
+		sgc = new sGameController(gv,player,10,10,this);
+		sgc.StartGame();	
 		
 		}
 	
@@ -61,7 +62,7 @@ public class SinglePlayer extends Activity {
 		{
 			if(intent != null)
 			{
-				gc.PlayAgain();
+				sgc.PlayAgain();
 			}
 		}
 		//finish
@@ -77,7 +78,7 @@ public class SinglePlayer extends Activity {
 	//按下返回键
 	public void onBackPressed()
 	{
-		gc.stopTimer();
+		sgc.stopTimer();
 		finish();
 		System.exit(0);
 	}

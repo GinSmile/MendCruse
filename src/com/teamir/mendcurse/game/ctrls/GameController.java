@@ -32,7 +32,7 @@ public class GameController
 	GameViews gameviews = null;
 	Stack<Question> Questions = null;
 	
-	private Runnable timeProgress = new Runnable()    //计时runnable
+	protected Runnable timeProgress = new Runnable()    //计时runnable
 	{
 
 		@Override
@@ -48,9 +48,9 @@ public class GameController
 			if(GameController.this.Status ==100)
 			{
 				GameController.this.QuesLocked = true;				
-				GameController.this.showAnswer(GameController.this.currCorrectOption, 0, false);
-				
-				GameController.this.updateStatus();
+				GameController.this.CommitOption(0, false);
+				return;
+			//	GameController.this.updateStatus();
 			}
 			if(GameController.this.Status >100)
 			{
@@ -67,7 +67,7 @@ public class GameController
 		}
 		
 	};
-	private Runnable nextQuesProgress = new Runnable()   //下一个问题
+	protected Runnable nextQuesProgress = new Runnable()   //下一个问题
 	{
 
 		@Override
@@ -93,20 +93,23 @@ public class GameController
 		for(int i = 0; i<4;i++)
 			optionViews[i].setOnClickListener(new GameOptionListener(i,this));
 	}
-	public void CommitOption(int thisoption)
+	public GameController()
+	{		
+	}
+	public void CommitOption(int thisoption,boolean ischoice)
 	{
 		this.stopTimer();
 		this.timerflag = true;
 		this.QuesLocked = true;
-		this.showAnswer(this.currCorrectOption, thisoption, true);
+		this.showAnswer(this.currCorrectOption, thisoption, ischoice);
 		this.updateStatus();
 		this.handler.postDelayed(nextQuesProgress, 500L);
 	}
 	public void StartGame()
 	{
 		updateStatus();
-		for(int i = 0;i<4;i++)
-			this.gameviews.getOptions()[i].setBackgroundResource(R.color.blue);
+//		for(int i = 0;i<4;i++)
+//			this.gameviews.getOptions()[i].setBackgroundResource(R.color.blue);
 		this.currQues = this.Questions.pop();
 		this.currCorrectOption = this.currQues.getCorrectoption();
 		this.showCurrQues(currQues);
