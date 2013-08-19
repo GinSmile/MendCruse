@@ -22,20 +22,23 @@ public class sGameController extends GameController
 		this.ac = ac;
 		this.Questions = new QuestionsGenerate(this.ac,this.Quess).getQuestions();
 		TextView[] optionViews = gameviews.getOptions();
-		for(int i = 0; i<4;i++)
-			optionViews[i].setOnClickListener(new GameOptionListener(i,this));
+//		for(int i = 0; i<4;i++)
+//			optionViews[i].setOnClickListener(new GameOptionListener(i,this));
 	}
 	public sGameController(GameViews gv,Player myPlayer,int t,int rq,Activity ac)
 	{
-		super(gv, t, rq,ac);
+		this(gv, t, rq,ac);
 		this.myPlayer = myPlayer;
-		myPlayer.ready();
+		for(int i = 0;i<4;i++)
+			this.gameviews.getOptions()[i].setOnClickListener(new GameOptionListener(i,this,this.myPlayer));
+		myPlayer.ready(true);
 		if(myPlayer.getName().equals(ANONYMOUS))
 		{
-		//	StartGame();
+//			StartGame();
 		}
 		
 	}
+	//重载方法,下同
 	public void CommitOption(int thisoption)
 	{
 		this.stopTimer();
@@ -54,11 +57,11 @@ public class sGameController extends GameController
 		this.updateStatus();
 		this.handler.postDelayed(nextQuesProgress, 500L);
 	}
-	//判断对错，并且更新相关变量
+	//重载方法,判断对错，并且更新相关变量
 	public void showAnswer(Player p,int correctoption,int curroption,boolean ischoice)
 	{
 		//正确，加分
-		if(p.showResult(curroption, correctoption, ischoice))
+		if(p.showResult(this.currQues,curroption, correctoption, ischoice))
 		{
 			this.tolScore +=10;
 			this.correctc++;
@@ -75,6 +78,7 @@ public class sGameController extends GameController
 		this.stopTimer();
 		Intent i = new Intent(this.ac,GameResult.class);
 		Bundle res = new Bundle();
+		res.putSerializable("resultlog", this.myPlayer.getOptionLogs());
 /*		res.putInt("score", this.tolScore);
 		res.putInt("correctc", this.correctc);
 		res.putInt("incorrectc",this.incorrectc);    */

@@ -1,7 +1,6 @@
 package com.teamir.mendcurse.game;
 
 import com.teamir.mendcurse.R;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;

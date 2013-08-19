@@ -13,7 +13,7 @@ public class GameOptionListener implements OnClickListener
 {
 	int thisoption;
 	GameController gc = null;
-	sGameController pgc = null;
+	sGameController sgc = null;
 	hGameController hgc = null;
 	Player player = null;
 	Player anotherPlayer = null;
@@ -21,7 +21,7 @@ public class GameOptionListener implements OnClickListener
 	public GameOptionListener(int option,sGameController sgc,Player p)
 	{
 		this.thisoption = option;
-		this.pgc = pgc;
+		this.sgc = sgc;
 		this.player = p;
 	}
 	public GameOptionListener(int option,hGameController hgc,Player p,Player anp)
@@ -46,10 +46,10 @@ public class GameOptionListener implements OnClickListener
 				gc.CommitOption(thisoption,true);
 			}
 		}
-		else if(pgc != null){
-			if(!pgc.QuesLocked){
+		else if(sgc != null){
+			if(!sgc.QuesLocked){
 				Log.v("pgc commit", "pgc commit");
-				this.pgc.CommitOption(thisoption);
+				this.sgc.CommitOption(thisoption);
 			}
 		}
 		else if(hgc != null){

@@ -1,14 +1,10 @@
 package com.teamir.mendcurse.game.ctrls;
 
-import java.util.*;
-
-import com.teamir.mendcurse.R;
 import com.teamir.mendcurse.game.*;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -43,8 +39,9 @@ public class hGameController extends GameController
 			optionViewsA[i].setOnClickListener(new GameOptionListener(i,this,this.playerA,this.playerB));
 			optionViewsB[i].setOnClickListener(new GameOptionListener(i,this,this.playerB,this.playerA));
 		}
-		this.playerA.ready();
-		this.playerB.ready();
+		this.playerA.ready(true);
+		this.playerB.ready(true
+				);
 	}
 	public hGameController()
 	{
@@ -76,39 +73,41 @@ public class hGameController extends GameController
 	public void showAnswer(Player p,Player anotherp,int correctoption,int curroption,boolean ischoice)
 	{
 		//面对提交者,正确，加分
-		if(p.showResult(curroption, correctoption, ischoice))
+		if(p.showResult(this.currQues,curroption, correctoption, ischoice))
 		{
 			if(p.equals(playerA)){
 				Log.v("playerA", "正确,加分");
 				this.ScoreA +=10;
 				this.correctcA++;
 				//另一个直接减分
-				anotherp.showResult(this.currCorrectOption,false);
+				anotherp.showResult(this.currQues,this.currCorrectOption,false);
 				this.ScoreB -=10;
 				this.incorrectcB++;
 			}
 			else
 			{
+				Log.v("playerB", "正确,加分");
 				this.ScoreB +=10;
 				this.correctcB++;
-				anotherp.showResult(this.currCorrectOption,false);
+				anotherp.showResult(this.currQues,this.currCorrectOption,false);
 				this.ScoreA -=10;
 				this.incorrectcA++;
 			}
 		}
 		//面对提交者,错误,减分
 		else{
-			Log.v("playerA", "错误,减分");
+			
 			if(p.equals(playerA)){
+				Log.v("playerA", "错误,减分");
 				this.ScoreA -=10;
 				this.incorrectcA++;
 				if(ischoice){
-					anotherp.showResult(this.currCorrectOption,true);
+					anotherp.showResult(this.currQues,this.currCorrectOption,true);
 					this.ScoreB +=10;
 					this.correctcB++;
 				}
 				else{
-					anotherp.showResult(curroption, correctoption, false);
+					anotherp.showResult(this.currQues,curroption, correctoption, false);
 					this.ScoreB -=10;
 					this.correctcB--;
 				}
@@ -116,15 +115,16 @@ public class hGameController extends GameController
 			}
 			else
 			{
+				Log.v("playerB", "错误,减分");
 				this.ScoreB -=10;
 				this.incorrectcB++;
 				if(ischoice){
-					anotherp.showResult(this.currCorrectOption,true);
+					anotherp.showResult(this.currQues,this.currCorrectOption,true);
 					this.ScoreB +=10;
 					this.correctcB++;
 				}
 				else{
-					anotherp.showResult(curroption, correctoption, false);
+					anotherp.showResult(this.currQues,curroption, correctoption, false);
 					this.ScoreB -=10;
 					this.correctcB--;
 				}
@@ -153,13 +153,11 @@ public class hGameController extends GameController
 	{
 		TextView scoreA = hgameviews.getScoreA();
 		InvertedTextView scoreB = hgameviews.getScoreB();
-		String textA = ""+ this.ScoreA;
-		String textB = ""+ this.ScoreB;
-		if(scoreA != null && scoreB != null){
-			scoreA.setText(textA);
-			scoreB.setText(textB);
-		}
-	}
+		String textA = ""+ this.playerA.getMyScore();
+		String textB = ""+ this.playerB.getMyScore();
+		scoreA.setText(textA);
+		scoreB.setText(textB);
+}
 	@Override
 	public void showCurrQues(Question q)
 	{
@@ -181,8 +179,8 @@ public class hGameController extends GameController
 		this.Status = 0;
 		this.RemainQues--;
 		this.updateStatus();
-		this.playerA.ready();
-		this.playerB.ready();
+		this.playerA.ready(false);
+		this.playerB.ready(false);
 		this.QuesLocked = false;
 		this.nextQues();
 		if(timerflag)
@@ -191,9 +189,13 @@ public class hGameController extends GameController
 	@Override
 	public void gameOver()
 	{
+		Log.v("print playerB", this.playerB.getOptionLogs().toString());
+		Log.v("size of playerB", this.playerB.getOptionLogs().size()+"");
 		this.stopTimer();
-		Intent i = new Intent(this.ac,GameResult.class);
+		Intent i = new Intent(this.ac,hGameResult.class);
 		Bundle res = new Bundle();
+		res.putSerializable("playerA", this.playerA.getOptionLogs());
+		res.putSerializable("playerB", this.playerB.getOptionLogs());
 /*		res.putInt("score", this.tolScore);
 		res.putInt("correctc", this.correctc);
 		res.putInt("incorrectc",this.incorrectc);    */

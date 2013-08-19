@@ -1,21 +1,25 @@
 package com.teamir.mendcurse.game.ctrls;
 
 import java.util.ArrayList;
-
 import com.teamir.mendcurse.R;
-
-import android.util.Log;
 import android.widget.TextView;
+import java.io.Serializable;
 
-public class Player
+public class Player implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	int playerID;
 	String name;
 	int Score = 0;    //历史最高分
 	int myScore = 0;   //本次游戏得分
+	int correctc = 0;   //答对的题数
+	int incorrectc = 0;  //答错 的题数
 	TextView[] myViews = null;
 	
-	public ArrayList<optionLog> optionLogs = new ArrayList<optionLog>();
+	protected ArrayList<optionLog> optionLogs = new ArrayList<optionLog>();  //记录答题情况
 	
 	public Player()
 	{
@@ -61,16 +65,38 @@ public class Player
 	{
 		return this.myViews;
 	}
+	public void setMyScore(int s)
+	{
+		this.myScore = s;
+	}
+	public int getMyScore()
+	{
+		return this.myScore;
+	}
+	public int getCorrectc()
+	{
+		return this.correctc;
+	}
+	public int getIncorrectc()
+	{
+		return this.incorrectc;
+	}
+	public ArrayList<optionLog> getOptionLogs()
+	{
+		return this.optionLogs;
+	}
 	public void commit(int myselect)
 	{
 		
 	}
-	public boolean showResult(int myselect,int corrselect,boolean ischoice)
+	//参数分别为问题、我的选择、正确选择、主动选择标记
+	public boolean showResult(Question ques,int myselect,int corrselect,boolean ischoice)
 	{
-		Log.v("enter player.showresult", "enter player.showresult");
+//		Log.v("enter player.showresult", "enter player.showresult");
 		optionLog myOption = new optionLog();
 		myOption.setMySelection(myselect);
 		myOption.setCorrSelection(corrselect);
+		myOption.setQuestion(ques);
 		
 		if(ischoice)
 		{
@@ -79,6 +105,8 @@ public class Player
 				this.myViews[corrselect].setBackgroundResource(R.color.green);
 				myOption.setResult(true);
 				optionLogs.add(myOption);
+				this.correctc++;
+				this.myScore +=10;
 	            return true;
 			}
 			else
@@ -89,6 +117,8 @@ public class Player
 				}
 	        	myOption.setResult(false);
 	        	optionLogs.add(myOption);
+	        	this.incorrectc++;
+	        	this.myScore -=10;
 				return false;
 			}
 		}
@@ -99,17 +129,20 @@ public class Player
 			}
 			myOption.setResult(false);
 			optionLogs.add(myOption);
+			this.incorrectc++;
+			this.myScore -=10;
 			return false;
 		}
 		
 	}
 	//在headsup模块中由于对方提交致自己分数变化
-	public boolean showResult(int corrselect,boolean invert)
+	public boolean showResult(Question ques,int corrselect,boolean invert)
 	{
 		//对方打错，自己加分
 		if(invert)
 		{
 			optionLog myOption = new optionLog();
+			myOption.setQuestion(ques);
 			myOption.setMySelection(corrselect);
 			myOption.setCorrSelection(corrselect);
 			myOption.setResult(true);
@@ -117,12 +150,15 @@ public class Player
 			for(int i = 0;i<4;i++){
 				this.myViews[i].setBackgroundResource(R.color.green);
 			}
+			this.correctc++;
+			this.myScore +=10;
             return true;
 		}
 		//对方答对自己减分
 		else
 		{
 			optionLog myOption = new optionLog();
+			myOption.setQuestion(ques);
 			myOption.setMySelection(0);
 			myOption.setCorrSelection(corrselect);
 			myOption.setResult(false);
@@ -130,12 +166,18 @@ public class Player
 			for(int i = 0;i<4;i++){
 				this.myViews[i].setBackgroundResource(R.color.red);
 			}
+			this.incorrectc++;
+			this.myScore -=10;
 			return false;
 		}
 		
 	}
-	public void ready()
+	public void ready(boolean isnewgame)
 	{
+		if(isnewgame){
+			this.optionLogs = new ArrayList<optionLog>();
+			this.correctc = this.incorrectc = this.myScore = 0;
+		}
 		for(int i = 0;i<4;i++)
 			this.myViews[i].setBackgroundResource(R.color.lightblue);
 	}
@@ -145,56 +187,5 @@ public class Player
 	{
 		Player player = (Player)p;
 		return (this.getMyViews()[0].getId() == player.getMyViews()[0].getId());
-	}
-}
-//记录player答题情况的数据结构
-class optionLog
-{
-	Question question = null;
-	int mySelection;
-	int corrSelection;
-	boolean result = false;
-	
-	public optionLog()
-	{
-		
-	}
-	public optionLog(Question ques,int ms,int cs)
-	{
-		this.question = ques;
-		this.mySelection = ms;
-		this.corrSelection = cs;
-	}
-	public void setQuestion(Question q)
-	{
-		this.question = q;
-	}
-	public Question getQuestion()
-	{
-		return this.question;
-	}
-	public void setMySelection(int s)
-	{
-		this.mySelection = s;
-	}
-	public int getMySelection()
-	{
-		return this.mySelection;
-	}
-	public void setCorrSelection(int s)
-	{
-		this.corrSelection = s;
-	}
-	public int getCorrSelection()
-	{
-		return this.corrSelection;
-	}
-	public void setResult(boolean r)
-	{
-		this.result = r;
-	}
-	public boolean getResult()
-	{
-		return this.result;
 	}
 }
