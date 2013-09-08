@@ -16,6 +16,7 @@ import com.agimind.widget.SlideHolder;
 import com.teamir.mendcurse.search.SearchElement;
 import com.teamir.mendcurse.table.Table;
 import com.teamir.mendcurse.game.Game;
+import com.teamir.mendcurse.calculate.Calculate;
 
 public class MainActivity extends Activity {
 
@@ -80,8 +81,8 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub						
-				//Intent intent = new Intent(MainActivity.this, SearchElement.class);
-				//startActivity(intent);
+				Intent intent = new Intent(MainActivity.this, Calculate.class);
+				startActivity(intent);
 			}
 			
 		});		
