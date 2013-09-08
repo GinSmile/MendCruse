@@ -42,7 +42,25 @@ public class Calculate extends Activity{
 			private void getBack(String text){
 				
 			}
-
+			private String textFormate(String text){
+				String newtext="";
+				int len = text.length();
+				for(int x=0;x<len;x++){
+					char ccode=text.charAt(x);
+					if(ccode >= 65 && ccode <= 90  ||
+							ccode >= 97 && ccode <= 122 ||
+							ccode >= 46 && ccode <= 57)
+						newtext+=ccode;
+					if (ccode == 44)
+						newtext += ".";
+					if (ccode == 40 || ccode == 91 || ccode == 123)
+						newtext += "(";
+					if (ccode == 41 || ccode == 93 || ccode == 125)
+						newtext += ")";
+				}
+				return newtext;
+			}
+			
 	    });
 	}
 }

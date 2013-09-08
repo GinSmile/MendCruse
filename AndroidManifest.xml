@@ -40,7 +40,7 @@
             android:screenOrientation="landscape" >
         </activity>
         <activity 
-            android:name="com.teamir.mendcurse.calcultae.Calculate"
+            android:name="com.teamir.mendcurse.calculate.Calculate"
             android:label="@string/app_name"
             android:screenOrientation="landscape">
         </activity>
