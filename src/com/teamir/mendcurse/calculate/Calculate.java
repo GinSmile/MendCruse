@@ -44,6 +44,8 @@ public class Calculate extends Activity{
 			private void getBack(String text){
 				String newtext=textFormate(text);
 				String a= ReadFormula(newtext);
+				if(a=="error")
+					Toast.makeText(Calculate.this,"输入非法！请注意元素大小写！ ",Toast.LENGTH_LONG).show();
 				double re=getExpressionValue(a);
 				Toast.makeText(Calculate.this,"分子量为： "+Double.toString(re),Toast.LENGTH_LONG).show();
 				System.out.println(re);
@@ -96,6 +98,7 @@ public class Calculate extends Activity{
 								name+=temp;
 								name+=temp2;
 								mass=findEle(name);
+								if(mass=="error")return "error";
 								tem+=mass;
 								x++;
 							}
@@ -103,6 +106,7 @@ public class Calculate extends Activity{
 								name="";
 								name+=temp;
 								mass=findEle(name);
+								if(mass=="error")return "error";
 								tem+=mass;
 							}
 						}
@@ -110,6 +114,7 @@ public class Calculate extends Activity{
 							name="";
 							name+=temp;
 							mass=findEle(name);
+							if(mass=="error")return "error";
 							tem+=mass;
 						}
 					}
