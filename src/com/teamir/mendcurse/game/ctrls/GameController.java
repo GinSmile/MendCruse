@@ -7,6 +7,7 @@ import com.teamir.mendcurse.game.*;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
@@ -164,7 +165,7 @@ public class GameController
 		GameController.this.RemainQues--;
 		this.updateStatus();
 		for(int i = 0;i<4;i++)
-			this.gameviews.getOptions()[i].setBackgroundResource(R.color.blue);
+			this.gameviews.getOptions()[i].setBackgroundResource(R.drawable.button_gradient_blue);
 		this.QuesLocked = false;
 		this.nextQues();
 		if(timerflag)
@@ -182,26 +183,26 @@ public class GameController
 		{
 			if(correctoption == curroption)
 			{
-				this.gameviews.getOptions()[correctoption].setBackgroundResource(R.color.green);
-				this.tolScore +=10;
+				this.gameviews.getOptions()[correctoption].setBackgroundResource(R.drawable.button_gradient_green);
+				this.tolScore +=5;
 				this.correctc++;
 			}
 			else
 			{
 	        		for(int i = 0;i<4;i++){
-						int color = (i == correctoption)?R.color.green:R.color.red;
+						int color = (i == correctoption)?R.drawable.button_gradient_green:R.drawable.button_gradient_red;
 						this.gameviews.getOptions()[i].setBackgroundResource(color);
 				}
-				this.tolScore -=10;
+				this.tolScore -=3;
 				this.incorrectc++;
 			}
 		}
 		else{
 			for(int i = 0;i<4;i++){
-				int color = (i == correctoption)?R.color.green:R.color.red;
+				int color = (i == correctoption)?R.drawable.button_gradient_green:R.drawable.button_gradient_red;
 				this.gameviews.getOptions()[i].setBackgroundResource(color);
 		}
-			this.tolScore -=10;
+			this.tolScore -=3;
 			this.incorrectc++;
 		}
 	}

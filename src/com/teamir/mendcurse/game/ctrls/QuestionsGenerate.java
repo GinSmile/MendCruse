@@ -29,7 +29,8 @@ public class QuestionsGenerate
 			String currEleSym = elements.get(currEleId).getSymbol();
 			String currEleName = elements.get(currEleId).getElementname();
 			String currEleEngName = elements.get(currEleId).getEnglishname();
-			String quesText = "以下选项哪一个是 "+currEleName+" 的化学式";
+	//		String quesText = "以下选项哪一个是 "+currEleName+" 的化学式";
+			String quesText = currEleName+"";
 			ques.setQuestionText(quesText);
 			//设置正确选项
 			int correctoption = ra.nextInt(4);		

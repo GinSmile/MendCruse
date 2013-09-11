@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    android:id="@+id/relativeLayout1" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads">
+    
+    <LinearLayout 
+        android:orientation="horizontal" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent">
+        <LinearLayout 
+            android:orientation="vertical" 
+            android:id="@+id/linearLayout1" 
+            android:layout_width="0.0dip" 
+            android:layout_height="fill_parent" 
+            android:layout_weight="0.7">
+            <LinearLayout 
+                android:orientation="vertical" 
+                android:id="@+id/linearLayout1" 
+                android:layout_width="fill_parent" 
+                android:layout_height="0.0dip" 
+                android:layout_weight="0.45">
+                <TextView 
+                    android:textAppearance="?android:textAppearanceMedium" 
+                    android:id="@+id/textViewPuntuacion" 
+                    android:background="@drawable/button_gradient_gray" 
+                    android:visibility="gone" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:text="Puntuación" 
+                    style="@style/LabelText" />
+                <LinearLayout 
+                    android:orientation="horizontal" 
+                    android:id="@+id/imageViewPregunta" 
+                    android:background="@drawable/pre_pizarra" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="fill_parent">
+                    <LinearLayout 
+                        android:gravity="center" 
+                        android:orientation="vertical" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="fill_parent" 
+                        android:layout_weight="1.0">
+                        <TextView 
+                            android:textStyle="bold" 
+                            android:textColor="#fff"
+                            android:gravity="center" 
+                            android:id="@+id/tgame_cenques"
+                            android:layout_width="fill_parent" 
+                            android:layout_height="fill_parent" 
+                            android:text="氧" 
+                            android:textSize="80sp"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView 
+                android:textAppearance="?android:textAppearanceMedium" 
+                android:id="@+id/textViewPregunta" 
+                android:background="@drawable/button_gradient_gray" 
+                android:visibility="gone" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+                style="@style/LabelText" />
+        </LinearLayout>
+        <LinearLayout 
+            android:orientation="vertical" 
+            android:id="@+id/linearLayout2" 
+            android:layout_width="0dip" 
+            android:layout_height="fill_parent" 
+            android:layout_weight="0.55">
+            <LinearLayout 
+                android:id="@+id/linearLayout3" 
+                android:layout_width="fill_parent" 
+                android:layout_height="fill_parent" 
+                android:orientation="vertical"
+                >
+                <LinearLayout 
+                    android:orientation="vertical"
+	                android:id="@+id/textViewPregunta" 
+	                android:background="@drawable/button_gradient_gray" 
+	                android:layout_width="fill_parent" 
+	                android:layout_height="wrap_content" 
+                    >
+	                <TextView 
+	                    android:id="@+id/tgame_tolsco"
+	                	android:text="总分：" 
+	                	style="@style/LabelText" 
+	                />
+	                <TextView 
+	                    android:id="@+id/tgame_ques"
+	                	android:text="问题： " style="@style/LabelText" />
+	                <TextView 
+	                    android:id="@+id/tgame_time"
+	                	android:text="时间: " style="@style/LabelText" />
+                </LinearLayout>
+                <ProgressBar 
+			        android:id="@+id/tgame_timebar"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="1.0dip"
+			        android:max="100"
+			        style="@android:style/Widget.ProgressBar.Horizontal"
+			        />
+         
+                <TextView 
+                    android:id="@+id/tgame_option0"
+                    android:clickable="true"
+                    android:background="@drawable/button_gradient_blue" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_weight="0.25" 
+                    style="@style/ButtonText" />
+                <TextView
+                    android:id="@+id/tgame_option1"
+                    android:clickable="true" 
+                    android:background="@drawable/button_gradient_purple" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_weight="0.25" 
+                    style="@style/ButtonText" />
+                <TextView
+                    android:id="@+id/tgame_option2"
+                    android:clickable="true" 
+                    android:background="@drawable/button_gradient_green" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_weight="0.25" 
+                    style="@style/ButtonText" />
+                <TextView 
+                    android:id="@+id/tgame_option3"
+                    android:clickable="true" 
+                    android:background="@drawable/button_gradient_yellow" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content"  
+                    android:layout_weight="0.25" 
+                    style="@style/ButtonText" />
+            </LinearLayout>
+           
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

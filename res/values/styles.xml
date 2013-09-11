@@ -75,9 +75,7 @@
      </style>
      <style name = "item_k" parent="table_item">
          <item name="android:background">@drawable/k</item>
-     </style>
-     
-     
+     </style>   
     
      <style name = "table_other1" parent="table_blank">
         <item name="android:background">@drawable/g</item>
@@ -88,6 +86,34 @@
         <item name="android:background">@drawable/h</item>
         <item name="android:alpha">1</item> 
       </style>
+      
+     <!-- singleplayer_testui中用到  start-->
+     <style name="LabelText">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">3.0dip</item>
+        <item name="android:shadowColor">#ff000000</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">2.0</item>
+    </style>
+    <style name="ButtonText">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">1.0dip</item>
+        <item name="android:shadowColor">#ff000000</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">2.0</item>
+    </style>
+    <!-- singleplayer_testui中用到  end-->
     
 </resources>
 

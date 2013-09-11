@@ -26,20 +26,20 @@ public class SinglePlayer extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.singleplayer);
+		setContentView(R.layout.singleplayer_testui);
 		
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		
 		//获取各view
-		tolsco = (TextView)findViewById(R.id.game_tolsco);
-		ques = (TextView)findViewById(R.id.game_ques);
-		time = (TextView)findViewById(R.id.game_time);
-		timebar = (ProgressBar)findViewById(R.id.game_timebar);
-		cenques = (TextView)findViewById(R.id.game_cenques);
-		options[0] = (TextView)findViewById(R.id.game_option0);
-		options[1] = (TextView)findViewById(R.id.game_option1);
-		options[2] = (TextView)findViewById(R.id.game_option2);
-		options[3] = (TextView)findViewById(R.id.game_option3);
+		tolsco = (TextView)findViewById(R.id.tgame_tolsco);
+		ques = (TextView)findViewById(R.id.tgame_ques);
+		time = (TextView)findViewById(R.id.tgame_time);
+		timebar = (ProgressBar)findViewById(R.id.tgame_timebar);
+		cenques = (TextView)findViewById(R.id.tgame_cenques);
+		options[0] = (TextView)findViewById(R.id.tgame_option0);
+		options[1] = (TextView)findViewById(R.id.tgame_option1);
+		options[2] = (TextView)findViewById(R.id.tgame_option2);
+		options[3] = (TextView)findViewById(R.id.tgame_option3);
 		gv = new GameViews();
 		gv.setCenterQues(cenques);
 		gv.setScore(tolsco);
@@ -49,7 +49,7 @@ public class SinglePlayer extends Activity {
 		gv.setOptions(options);
 		Player player = new Player("anonymous");
 		player.setMyViews(options);
-		sgc = new sGameController(gv,player,10,10,this);
+		sgc = new sGameController(gv,player,10,20,this);
 		sgc.StartGame();	
 		
 		}

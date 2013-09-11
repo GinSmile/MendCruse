@@ -63,11 +63,11 @@ public class sGameController extends GameController
 		//正确，加分
 		if(p.showResult(this.currQues,curroption, correctoption, ischoice))
 		{
-			this.tolScore +=10;
+			this.tolScore +=5;
 			this.correctc++;
 		}
 		else{
-			this.tolScore -=10;
+			this.tolScore -=3;
 			this.incorrectc++;
 		}
 		

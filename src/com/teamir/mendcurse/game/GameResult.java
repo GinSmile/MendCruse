@@ -50,11 +50,11 @@ public class GameResult extends Activity
 		{
 			if(ol.getResult()){
 				this.correctc++;
-				this.tolscore +=10;
+				this.tolscore +=5;
 			}
 			else{
 				incorrectc++;
-				this.tolscore -=10;
+				this.tolscore -=3;
 			}
 		}
 		String scoreText = "总分: "+ this.tolscore;

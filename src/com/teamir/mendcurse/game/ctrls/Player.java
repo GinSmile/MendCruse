@@ -102,35 +102,35 @@ public class Player implements Serializable
 		{
 			if(myselect == corrselect)
 			{
-				this.myViews[corrselect].setBackgroundResource(R.color.green);
+				this.myViews[corrselect].setBackgroundResource(R.drawable.button_gradient_green);
 				myOption.setResult(true);
 				optionLogs.add(myOption);
 				this.correctc++;
-				this.myScore +=10;
+				this.myScore +=5;
 	            return true;
 			}
 			else
 			{
 	        		for(int i = 0;i<4;i++){
-						int color = (i == corrselect)?R.color.green:R.color.red;
+						int color = (i == corrselect)?R.drawable.button_gradient_green:R.drawable.button_gradient_red;
 						this.myViews[i].setBackgroundResource(color);
 				}
 	        	myOption.setResult(false);
 	        	optionLogs.add(myOption);
 	        	this.incorrectc++;
-	        	this.myScore -=10;
+	        	this.myScore -=3;
 				return false;
 			}
 		}
 		else{
 			for(int i = 0;i<4;i++){
-				int color = (i == corrselect)?R.color.green:R.color.red;
+				int color = (i == corrselect)?R.drawable.button_gradient_green:R.drawable.button_gradient_red;
 				this.myViews[i].setBackgroundResource(color);
 			}
 			myOption.setResult(false);
 			optionLogs.add(myOption);
 			this.incorrectc++;
-			this.myScore -=10;
+			this.myScore -=3;
 			return false;
 		}
 		
@@ -151,7 +151,7 @@ public class Player implements Serializable
 				this.myViews[i].setBackgroundResource(R.color.green);
 			}
 			this.correctc++;
-			this.myScore +=10;
+			this.myScore +=5;
             return true;
 		}
 		//对方答对自己减分
@@ -167,7 +167,7 @@ public class Player implements Serializable
 				this.myViews[i].setBackgroundResource(R.color.red);
 			}
 			this.incorrectc++;
-			this.myScore -=10;
+			this.myScore -=3;
 			return false;
 		}
 		
@@ -179,7 +179,7 @@ public class Player implements Serializable
 			this.correctc = this.incorrectc = this.myScore = 0;
 		}
 		for(int i = 0;i<4;i++)
-			this.myViews[i].setBackgroundResource(R.color.lightblue);
+			this.myViews[i].setBackgroundResource(R.drawable.button_gradient_blue);
 	}
 	
 	@Override
