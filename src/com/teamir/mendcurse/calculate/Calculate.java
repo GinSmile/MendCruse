@@ -42,13 +42,43 @@ public class Calculate extends Activity{
 				getBack(molecule);
 			}
 			private void getBack(String text){
-				String newtext=textFormate(text);
-				String a= ReadFormula(newtext);
-				if(a=="error")
-					Toast.makeText(Calculate.this,"输入非法！请注意元素大小写！ ",Toast.LENGTH_LONG).show();
-				double re=getExpressionValue(a);
-				Toast.makeText(Calculate.this,"分子量为： "+Double.toString(re),Toast.LENGTH_LONG).show();
-				System.out.println(re);
+				if(check(text)){
+					String newtext=textFormate(text);
+					String a= ReadFormula(newtext);
+					if(a=="error")
+						Toast.makeText(Calculate.this,"找不到输入元素~ ",Toast.LENGTH_LONG).show();
+					double re=getExpressionValue(a);
+					Toast.makeText(Calculate.this,"分子量为： "+Double.toString(re),Toast.LENGTH_LONG).show();
+				}
+			}
+			public boolean check(String text){
+				int len=text.length();
+				if(len==0){
+					System.out.println("输入为空");
+					return false;
+				}
+				else{
+					int num=0;
+					for(int i=0;i<len;i++){
+						if(text.charAt(i)>='a'&&text.charAt(i)<='z'){
+							if(i==0){
+								Toast.makeText(Calculate.this,"输入非法！请注意元素大小写！ ",Toast.LENGTH_LONG).show();
+								return false;
+							}
+							if(!(text.charAt(i-1)>='A'&&text.charAt(i-1)<='Z')){
+								Toast.makeText(Calculate.this,"输入非法！请注意元素大小写！ ",Toast.LENGTH_LONG).show();
+								return false;
+							}
+					    }
+						else if(text.charAt(i)=='(')num++;
+						else if(text.charAt(i)==')')num--;	
+				    }
+					if(num!=0){
+						Toast.makeText(Calculate.this,"括号不匹配！ ",Toast.LENGTH_LONG).show();
+						return false;
+					}
+				}
+					return true;
 			}
 			private String textFormate(String text){
 				String newtext="";
