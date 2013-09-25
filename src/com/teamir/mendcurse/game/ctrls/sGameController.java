@@ -11,7 +11,7 @@ import com.teamir.mendcurse.game.GameResult;
 public class sGameController extends GameController
 {
 	private final String ANONYMOUS = "anonymous";
-	Player myPlayer = null;
+	Player myPlayer;
 
 	public sGameController(GameViews gv,int t,int rq,Activity ac)
 	{
@@ -79,6 +79,7 @@ public class sGameController extends GameController
 		Intent i = new Intent(this.ac,GameResult.class);
 		Bundle res = new Bundle();
 		res.putSerializable("resultlog", this.myPlayer.getOptionLogs());
+		res.putSerializable("playername", this.myPlayer.getName());
 /*		res.putInt("score", this.tolScore);
 		res.putInt("correctc", this.correctc);
 		res.putInt("incorrectc",this.incorrectc);    */

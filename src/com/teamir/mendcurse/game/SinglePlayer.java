@@ -1,5 +1,7 @@
 package com.teamir.mendcurse.game;
 
+import java.util.Random;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -47,7 +49,7 @@ public class SinglePlayer extends Activity {
 		gv.setRmainTimesv(time);
 		gv.setTimeBar(timebar);
 		gv.setOptions(options);
-		Player player = new Player("anonymous");
+		Player player = new Player("anonymous"+new Random().nextInt(100000));
 		player.setMyViews(options);
 		sgc = new sGameController(gv,player,10,20,this);
 		sgc.StartGame();	

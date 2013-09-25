@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    android:id="@+id/game_result_testui_view" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads">
+    
+    <LinearLayout 
+        android:orientation="horizontal" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent">
+        <LinearLayout 
+            android:orientation="vertical" 
+            android:id="@+id/linearLayout1" 
+            android:layout_width="0.0dip" 
+            android:layout_height="fill_parent" 
+            android:layout_weight="0.7">
+            <LinearLayout 
+                android:orientation="vertical" 
+                android:id="@+id/linearLayout1" 
+                android:layout_width="fill_parent" 
+                android:layout_height="0.0dip" 
+                android:layout_weight="0.45">
+                <ScrollView 	                 
+	                android:background="@drawable/button_gradient_gray" 
+	                android:layout_width="fill_parent" 
+	                android:layout_height="fill_parent" 
+                    >
+                    <TableLayout 
+                        android:id="@+id/game_result_testui_score_rankview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*"
+                        >
+                    <TableRow>
+                    <TextView 
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:text="Rank"
+                        />
+                    <TextView 
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:text="Name"
+                        />
+                    <TextView 
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:text="Score"
+                        />
+                    </TableRow>
+                    </TableLayout>
+                    
+                </ScrollView><!-- 左边大框结束 -->
+            </LinearLayout>
+            <TextView 
+                android:textAppearance="?android:textAppearanceMedium" 
+                android:id="@+id/textViewPregunta" 
+                android:background="@drawable/button_gradient_gray" 
+                android:visibility="gone" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+                style="@style/LabelText" />
+        </LinearLayout>
+        <!-- 右边开始 -->
+        <LinearLayout 
+            android:orientation="vertical" 
+            android:id="@+id/linearLayout2" 
+            android:layout_width="0dip" 
+            android:layout_height="fill_parent" 
+            android:layout_weight="0.55">
+            <LinearLayout 
+                android:id="@+id/linearLayout3" 
+                android:layout_width="fill_parent" 
+                android:layout_height="fill_parent" 
+                android:orientation="vertical"
+                >
+                <LinearLayout 
+                    android:orientation="vertical"
+	                android:id="@+id/textViewPregunta" 
+	                android:background="@drawable/button_gradient_gray" 
+	                android:layout_width="fill_parent" 
+	                android:layout_height="wrap_content" 
+                    >
+	                <TextView 
+	                    android:id="@+id/game_result_testui_tolsco"
+	                	android:text="总分：" 
+	                	style="@style/LabelText" 
+	                />
+	                <TextView 
+	                    android:id="@+id/game_result_testui_rank"
+	                	android:text="排名： " style="@style/LabelText" />
+	                <TextView 
+	                    android:id="@+id/game_result_testui_corrques"
+	                	android:text="答对个数： " style="@style/LabelText" />
+	                <TextView 
+	                    android:id="@+id/game_result_testui_incorrques"
+	                	android:text="答错个数: " style="@style/LabelText" />
+                </LinearLayout>       
+                <TextView 
+                    android:id="@+id/game_result_testui_playagain"
+                    android:clickable="true"
+                    android:background="@drawable/button_gradient_blue" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_weight="0.5" 
+                    style="@style/ButtonText" 
+                    android:text="Play Again"
+                    />
+                <TextView
+                    android:id="@+id/game_result_testui_back"
+                    android:clickable="true" 
+                    android:background="@drawable/button_gradient_purple" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_weight="0.5" 
+                    android:text="Back"
+                    style="@style/ButtonText" />
+            </LinearLayout>
+           
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
