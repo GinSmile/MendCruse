@@ -31,7 +31,7 @@ public class GameResult extends Activity
 	TextView playagain;
 	TextView back;
 	Intent i;
-	int tolscore = 0,correctc = 0,incorrectc  = 0;
+	int tolscore = 0,correctc = 0,incorrectc  = 0,curank = 0;
 	SharedPreferences preference;
 	SharedPreferences.Editor editor;
 	@SuppressWarnings("unchecked")
@@ -91,14 +91,14 @@ public class GameResult extends Activity
 //		Log.v("set size", scoresset.size()+"");
 		@SuppressWarnings("unchecked")
 		ArrayList scoreslist = new ArrayList(scoresset);
-		Collections.sort(scoreslist, new Comparator<Map.Entry>(){
+		Collections.sort(scoreslist, new Comparator<Map.Entry>(){   //定义排序算法
 			@Override
 			public int compare(Map.Entry arg0, Map.Entry arg1) {
 				// TODO Auto-generated method stub
 				int one = 0,two = 0;
 				one = (arg0.getValue()==null || arg0.getValue() == "")?0:(Integer)arg0.getValue();
 				two = (arg1.getValue()==null || arg1.getValue() == "")?0:(Integer)arg1.getValue();
-				return one-two;
+				return two-one;
 			}
 			
 		});
@@ -111,11 +111,15 @@ public class GameResult extends Activity
 			String n = (String)(mapen.getKey());
 			String s  = ""+(Integer)(mapen.getValue());	
 			this.addRows(""+irank, n, s, scorerank);
+			if(n.equals(playername))
+				this.curank = irank;
 			irank++;
 		}
 		Log.v("Scores result", text);
 		//显示信息
+		rankText += curank;
 		score.setText(scoreText);
+		rank.setText(rankText);
 		rigques.setText(rightcText);
 		wroques.setText(wrongcText);    
 		
