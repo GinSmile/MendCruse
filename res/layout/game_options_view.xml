@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" 
+    >
+    <TableLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        >
+        <TableRow >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名"
+            />
+        <AutoCompleteTextView  
+		android:id="@+id/gov_username"
+		android:layout_width="100dip" 
+		android:layout_height="wrap_content" 
+		android:dropDownHorizontalOffset="20dp"
+		android:completionThreshold="1"
+		/>
+    </TableRow>
+   <TableRow >
+       <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="题目数量"
+            /> 
+          <AutoCompleteTextView  
+			android:id="@+id/gov_count"
+			android:layout_width="20dip" 
+			android:layout_height="wrap_content" 
+			android:dropDownHorizontalOffset="20dp"
+			android:completionThreshold="1"
+			/>
+   </TableRow>
+   <TableRow >
+       <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="音效"
+            /> 
+        <RadioGroup 
+            android:id="@+id/gov_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton 
+                android:id="@+id/gov_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开启"
+                />
+            <RadioButton 
+                android:id="@+id/gov_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关闭"
+                />
+        </RadioGroup>
+   </TableRow>
+   <Button 
+       android:id="@+id/gov_ok"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:text="确定"
+       />
+    </TableLayout>
+</LinearLayout>

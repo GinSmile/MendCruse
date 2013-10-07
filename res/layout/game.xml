@@ -34,22 +34,14 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:text="双人"
-             />
-       
-        <TableRow >
+             />      
+        
             <Button 
                 android:id="@+id/game_option"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="选项"
                 />
-            <Button 
-                android:id="@+id/game_scores"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="排行榜"
-                />
-        </TableRow>
         </TableLayout>
      </LinearLayout>
 </RelativeLayout>

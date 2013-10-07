@@ -22,6 +22,10 @@ public class SinglePlayer extends Activity {
 	private TextView cenques;
 	private TextView[] options = new TextView[4];   //4个选项view
 	
+	private String playername = null;
+	private int quescount = 20;
+	private boolean opensound = false;
+	
 	GameViews gv = null;
 	sGameController sgc = null;
 
@@ -31,6 +35,12 @@ public class SinglePlayer extends Activity {
 		setContentView(R.layout.singleplayer_testui);
 		
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		
+		Intent i = getIntent();
+		Bundle bundle = i.getExtras();
+		playername = bundle.getString("playername");
+		quescount = bundle.getInt("quescount");
+		opensound = bundle.getBoolean("opensound");
 		
 		//获取各view
 		tolsco = (TextView)findViewById(R.id.tgame_tolsco);
@@ -49,9 +59,9 @@ public class SinglePlayer extends Activity {
 		gv.setRmainTimesv(time);
 		gv.setTimeBar(timebar);
 		gv.setOptions(options);
-		Player player = new Player("anonymous"+new Random().nextInt(100000));
+		Player player = new Player(playername);
 		player.setMyViews(options);
-		sgc = new sGameController(gv,player,10,20,this);
+		sgc = new sGameController(gv,player,10,quescount,this,opensound);
 		sgc.StartGame();	
 		
 		}

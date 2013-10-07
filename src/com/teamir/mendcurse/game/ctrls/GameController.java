@@ -7,7 +7,8 @@ import com.teamir.mendcurse.game.*;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
@@ -33,9 +34,9 @@ public class GameController
 	GameViews gameviews = null;
 	Stack<Question> Questions = null;
 	
+	
 	protected Runnable timeProgress = new Runnable()    //计时runnable
 	{
-
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
@@ -95,7 +96,7 @@ public class GameController
 			optionViews[i].setOnClickListener(new GameOptionListener(i,this));
 	}
 	public GameController()
-	{		
+	{	
 	}
 	public void CommitOption(int thisoption,boolean ischoice)
 	{
@@ -226,4 +227,5 @@ public class GameController
 		i.putExtras(res);
 		this.ac.startActivityForResult(i,0);
 	}
+	
 }

@@ -43,6 +43,7 @@ public class GameResult extends Activity
 		setContentView(scoreview);
 		
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+	    
 		//获取各view
 		score = (TextView)scoreview.findViewById(R.id.game_result_testui_tolsco);
 		rank = (TextView)scoreview.findViewById(R.id.game_result_testui_rank);
@@ -50,10 +51,10 @@ public class GameResult extends Activity
 		wroques = (TextView)scoreview.findViewById(R.id.game_result_testui_incorrques);
 		playagain = (TextView)scoreview.findViewById(R.id.game_result_testui_playagain);
 		back = (TextView)scoreview.findViewById(R.id.game_result_testui_back);
+		
 		//处理前一个activity传来的数据
 		i = getIntent();
-		Bundle data = i.getExtras();
-		
+		Bundle data = i.getExtras();	
 		@SuppressWarnings("unchecked")
 		ArrayList<optionLog> result = (ArrayList<optionLog>)data.getSerializable("resultlog");
 		String playername = (String)data.getSerializable("playername");
@@ -74,17 +75,20 @@ public class GameResult extends Activity
 		String rankText = "排名："+ "";
 		String rightcText = "答对个数: " + this.correctc;
 		String wrongcText = "答错个数: " + this.incorrectc;
+		
 		//处理sharedPreferences
 		preference = getSharedPreferences("data",MODE_PRIVATE);
 		editor = preference.edit();
 		int lastscore = 0;
 		if(preference.contains(playername))
-			lastscore = preference.getInt(playername, 0);		
+			lastscore = preference.getInt(playername, 0);
+		//如果本次分数大于上次分数或者上次分数为零
 		if(this.tolscore > lastscore || lastscore == 0)
 		{
 			editor.putInt(playername, this.tolscore);
 			editor.commit();
 		}
+		
 		//处理排行榜数据
 		Map<String,Integer> scoresmap = (Map<String,Integer>)preference.getAll(); 
 		Set scoresset = scoresmap.entrySet();
@@ -115,7 +119,7 @@ public class GameResult extends Activity
 				this.curank = irank;
 			irank++;
 		}
-		Log.v("Scores result", text);
+//		Log.v("Scores result", text);
 		//显示信息
 		rankText += curank;
 		score.setText(scoreText);
