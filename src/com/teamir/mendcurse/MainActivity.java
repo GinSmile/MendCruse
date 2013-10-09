@@ -96,20 +96,11 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub						
 				mSlideHolder.close();
+				Intent intent = new Intent(MainActivity.this, About.class);
+				startActivity(intent);
 			}
 			
 		});	
-		
-		Button setting = (Button)findViewById(R.id.setting);
-		setting.setOnClickListener(new OnClickListener(){
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub						
-				mSlideHolder.close();
-			}
-			
-		});
 		
 	}
 	

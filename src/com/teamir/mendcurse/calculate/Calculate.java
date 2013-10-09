@@ -4,24 +4,18 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.teamir.mendcurse.Element;
-import com.agimind.widget.SlideHolder;
 import com.teamir.mendcurse.AppData;
+import com.teamir.mendcurse.Element;
 import com.teamir.mendcurse.R;
-import com.teamir.mendcurse.search.SearchElement;
-import com.teamir.mendcurse.table.ItemView;
 
 public class Calculate extends Activity{
 	@Override

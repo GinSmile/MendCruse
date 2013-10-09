@@ -18,19 +18,19 @@
                 android:id="@+id/about"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_selector"
+                android:background="@drawable/a"
                 android:gravity="center_vertical|left"
                 android:text="@string/about"
                 android:textColor="@color/title_btn_text" />
 
-            <Button
+<!--             <Button
                 android:id="@+id/setting"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/btn_selector"
                 android:gravity="center_vertical|left"
                 android:text="@string/setting"
-                android:textColor="@color/title_btn_text" />
+                android:textColor="@color/title_btn_text" /> -->
         </LinearLayout>
     </ScrollView>
 

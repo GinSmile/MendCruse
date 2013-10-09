@@ -39,7 +39,7 @@
                 <TextView
                     android:layout_width="200dip"
                 	android:layout_height="20dip"
-                	android:text="more detail"
+                	android:text="点击查看Wikipedia"
                 	android:id="@+id/wiki_btn"
                     />
 

@@ -27,7 +27,7 @@
 	              android:layout_height="wrap_content"
 	              android:layout_toRightOf="@id/imageView1"
 	              android:layout_centerVertical="true"
-	              android:text="微信，不只是个聊天工具"
+	              android:text="  元素周期表速查"
 	              android:textSize="18sp" />
 
 	      </RelativeLayout>

@@ -25,7 +25,7 @@
 	              android:layout_height="wrap_content"
 	              android:layout_toRightOf="@id/imageView1"
 	              android:layout_centerVertical="true"
-	              android:text="门捷列夫的诅咒~~"
+	              android:text="好用的分子量计算"
 	              android:textSize="18sp" />
 
 	          <Button
