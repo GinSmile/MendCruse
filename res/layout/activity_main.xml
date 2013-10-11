@@ -66,19 +66,22 @@
 
                 <TableRow>
 
+                    <!-- 如果需要修改按钮背景颜色修改drawable/button_gradient_main中对应的值即可 -->
                     <Button
                         android:id="@+id/all_element"
                         android:layout_width="200dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/btn_selector"
+                        android:background="@drawable/button_gradient_main"
                         android:fadingEdge="horizontal|vertical"
+                        android:layout_margin="1.0dip"
                         android:text="@string/all_element" />
 
                     <Button
                         android:id="@+id/search"
                         android:layout_width="200dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/btn_selector"
+                        android:background="@drawable/button_gradient_main"
+                        android:layout_margin="1.0dip"
                         android:text="@string/search" />
 
                 </TableRow>
@@ -89,14 +92,16 @@
                         android:id="@+id/game"
                         android:layout_width="200dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/btn_selector"
+                        android:background="@drawable/button_gradient_main"
+                        android:layout_margin="1.0dip"
                         android:text="@string/game" />
 
                     <Button
                         android:id="@+id/calc"
                         android:layout_width="200dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/btn_selector"
+                        android:background="@drawable/button_gradient_main"
+                        android:layout_margin="1.0dip"
                         android:text="@string/calc" />
 
                 </TableRow>
