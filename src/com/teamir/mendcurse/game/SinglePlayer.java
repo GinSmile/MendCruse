@@ -1,16 +1,16 @@
 package com.teamir.mendcurse.game;
 
-import java.util.Random;
-
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.teamir.mendcurse.game.ctrls.*;
 import com.teamir.mendcurse.R;
+import com.teamir.mendcurse.game.ctrls.GameViews;
+import com.teamir.mendcurse.game.ctrls.Player;
+import com.teamir.mendcurse.game.ctrls.sGameController;
 
 
 public class SinglePlayer extends Activity {

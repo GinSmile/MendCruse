@@ -6,21 +6,20 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-import com.teamir.mendcurse.*;
-import com.teamir.mendcurse.game.ctrls.*;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.view.WindowManager;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+import com.teamir.mendcurse.R;
+import com.teamir.mendcurse.game.ctrls.optionLog;
 
 public class GameResult extends Activity
 {

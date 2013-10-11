@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     android:gravity="center_vertical|center_horizontal"
     android:orientation="vertical" >
 
@@ -18,13 +19,14 @@
 	        android:layout_height="wrap_content"
 	        android:hint="请输入任一属性，如 Fe /铁 /26"
 	        android:textSize="15dip" />
+
 	    <Button
 	        android:id="@+id/search_element_btn"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:text="查询"
-	        
-	        />
+	        android:background="@drawable/btn_selector"
+	        android:text="查询" />
+
     </LinearLayout>
     
 </LinearLayout>

@@ -8,14 +8,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.agimind.widget.SlideHolder;
 import com.teamir.mendcurse.AppData;
 import com.teamir.mendcurse.Element;
 import com.teamir.mendcurse.R;
@@ -27,7 +26,6 @@ public class SearchElement extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.search_element);
-		mSlideHolder = (SlideHolder) findViewById(R.id.slideHolder);
 		
 		//去掉状态栏
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -88,5 +86,4 @@ public class SearchElement extends Activity {
 	}
 	
 	
-	private SlideHolder mSlideHolder;
 }
