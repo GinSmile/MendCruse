@@ -19,7 +19,7 @@
 	              android:fadingEdge="vertical"
 	              android:layout_centerVertical="true"
 	              android:layout_alignParentLeft="true"
-	              android:src="@drawable/a" />
+	              android:src="@drawable/one" />
 	          
 	          <TextView
 	              android:id="@+id/text1"

@@ -29,11 +29,11 @@ public class ItemView extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		String isPop = this.getIntent().getStringExtra("isPop");
-		if (isPop == null) {
+/*		if (isPop == null) {
 			// SearchElement界面，非dialog形式
 			this.setTheme(R.style.AppTheme);
 			Log.v("ddd", "非dialog形式");
-		}
+		}*/
 		super.onCreate(savedInstanceState);
 //
 //		if (isPop == null) {

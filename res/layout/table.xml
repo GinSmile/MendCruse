@@ -4,19 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
+
     <ScrollView
-        android:layout_width="fill_parent" 
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:scrollbarSize="0.0dip" 
-	    android:scrollbars="none" 
-	    android:fadingEdge="none"
-        >
-     <HorizontalScrollView 
-	   android:scrollbarSize="0.0dip" 
-	   android:scrollbars="none" 
-	   android:fadingEdge="none"
-       android:layout_width="fill_parent" 
-       android:layout_height="fill_parent">
+        android:background="@drawable/back"
+        android:fadingEdge="none"
+        android:scrollbarSize="0.0dip"
+        android:scrollbars="none" >
+
+     <HorizontalScrollView
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:fadingEdge="none"
+         android:scrollbarSize="0.0dip"
+         android:scrollbars="none" >
+
                     <LinearLayout 
                         android:orientation="horizontal" 
                         android:layout_gravity="center"

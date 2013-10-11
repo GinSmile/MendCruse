@@ -16,7 +16,7 @@
 	              android:fadingEdge="vertical"
 	              android:layout_centerVertical="true"
 	              android:layout_alignParentLeft="true"
-	              android:src="@drawable/c" />
+	              android:src="@drawable/two" />
 	          
 	          <TextView
 	              android:id="@+id/text1"
@@ -30,14 +30,12 @@
 
 	          <Button
 	              android:layout_width="wrap_content"
-	              android:layout_height="wrap_content"
+	              android:layout_height="40dip"
 	              android:layout_alignBottom="@+id/imageView1"
 	              android:layout_alignRight="@+id/text1"
-	              android:layout_marginBottom="14dp"
-	              android:layout_marginRight="58dp"
-	              android:onClick="startBtn"
 	              android:background="@drawable/btn_selector"
-	              android:text="打开Mend Curse" />
+	              android:onClick="startBtn"
+	              android:text="现在开始使用" />
 
 	      </RelativeLayout>
 
