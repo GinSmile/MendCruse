@@ -41,8 +41,10 @@ public class Calculate extends Activity{
 					String a= ReadFormula(newtext);
 					if(a=="error")
 						Toast.makeText(Calculate.this,"找不到输入元素~ ",Toast.LENGTH_LONG).show();
-					double re=getExpressionValue(a);
-					Toast.makeText(Calculate.this,"分子量为： "+Double.toString(re),Toast.LENGTH_LONG).show();
+					else{
+						double re=getExpressionValue(a);
+						Toast.makeText(Calculate.this,"分子量为： "+Double.toString(re),Toast.LENGTH_LONG).show();
+					}
 				}
 			}
 			public boolean check(String text){
